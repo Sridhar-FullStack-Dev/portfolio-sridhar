@@ -1,6 +1,9 @@
+import Intro from "@/components/Intro/Intro";
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <Intro />
+    </div>
   );
 }
