@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
+@font-face {
+  font-family: ATC;
+  src: url("../public/fonts/atc/ATC.ttf");
+}
+
+.intro-font {
+  font-family: "ATC";
+}

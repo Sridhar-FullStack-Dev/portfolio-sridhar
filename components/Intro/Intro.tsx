@@ -1,10 +1,26 @@
 "use client";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import IntroHeading from "./IntroHeading/IntroHeading";
+import IntroLoader from "./IntroLoader/IntroLoader";
 
 export default function Intro() {
+  const [loading, setLoading] = useState(true);
+
   return (
-    <div className="h-screen w-screen bg-black text-white flex justify-center items-center">
-      <motion.div>Hey I am Developer</motion.div>
-    </div>
+    <AnimatePresence mode="wait">
+      {loading && (
+        <motion.div
+          className="fixed h-screen w-screen"
+          exit={{ x: "-100%" }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+        >
+          <div className="relative h-full w-full bg-alt-black text-alt-white flex justify-center items-center intro-font">
+            <IntroHeading />
+            <IntroLoader setLoading={setLoading} loading={loading} />
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }
