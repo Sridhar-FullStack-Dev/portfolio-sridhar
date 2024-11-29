@@ -17,12 +17,21 @@ img {
   src: url("../public/fonts/sarcolenta/Sarcolenta.ttf");
 }
 
+@font-face {
+  font-family: HouseMontague;
+  src: url("../public/fonts/HouseMontague/HouseMontague.otf");
+}
+
 .atc-font {
   font-family: "ATC";
 }
 
 .sarcolenta-font {
   font-family: "Sarcolenta";
+}
+
+.houseMontage-font {
+  font-family: "HouseMontague";
 }
 
 @layer base {

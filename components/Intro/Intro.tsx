@@ -12,7 +12,7 @@ export default function Intro() {
     <AnimatePresence mode="wait">
       {loading && (
         <motion.div
-          className="fixed h-screen w-screen"
+          className="fixed h-screen w-screen z-[9999]"
           exit={{ x: "-100%" }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >

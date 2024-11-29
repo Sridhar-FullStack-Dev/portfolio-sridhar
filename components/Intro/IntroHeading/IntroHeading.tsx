@@ -35,7 +35,7 @@ export default function IntroHeading() {
   return (
     <div>
       <motion.div
-        className="text-4xl flex flex-wrap justify-center gap-2"
+        className="text-4xl flex flex-wrap justify-center gap-2 mb-32"
         variants={container}
         initial="hidden"
         animate="visible"
