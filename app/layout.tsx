@@ -1,7 +1,7 @@
+import Audio from "@/components/Audio/Audio";
+import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 import type { Metadata } from "next";
 import "./globals.css";
-import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
-import Audio from "@/components/Audio/Audio";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sridhar-portfolio.com"),
@@ -64,10 +64,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="antialiased selection:bg-black selection:text-white">
+      <body className="antialiased bg-alt-black text-alt-white selection:bg-black selection:text-white">
         <SmoothScroll>
           {children}
           <Audio />
+          
         </SmoothScroll>
       </body>
     </html>

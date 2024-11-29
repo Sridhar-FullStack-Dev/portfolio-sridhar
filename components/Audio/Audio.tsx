@@ -9,7 +9,7 @@ export default function Audio() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setBarColor("#0C0C0C");
+      setBarColor("#efefef");
     }, 3000);
 
     return () => clearTimeout(timer);
@@ -29,7 +29,7 @@ export default function Audio() {
   const bars = Array(3).fill(0);
 
   return (
-    <div className="fixed top-10 right-10 flex items-center gap-4">
+    <div className="fixed top-10 right-10 flex items-center gap-4 z-10">
       <audio ref={audioRef} src="/audio/audio.mp3" loop />
 
       <div
