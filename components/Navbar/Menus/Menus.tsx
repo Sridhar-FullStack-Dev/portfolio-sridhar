@@ -103,6 +103,10 @@ interface MenuItem {
 const menuItem: MenuItem[] = [
   {
     href: "/",
+    name: "Home",
+  },
+  {
+    href: "/",
     name: "About",
   },
   {

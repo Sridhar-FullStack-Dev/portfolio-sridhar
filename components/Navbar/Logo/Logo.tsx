@@ -19,7 +19,7 @@ export default function Logo({ isMenusOpen, setIsMenusOpen }: LogoProps) {
         title="Sridhar - Portfolio"
         className="houseMontage-font tracking-wide text-3xl relative uppercase flex justify-center items-center gap-2"
       >
-        <div className="relative w-10 h-10 overflow-hidden rounded-full animate-pulse">
+        <div className="relative w-10 h-10 overflow-hidden rounded-full">
           <Image
             src={"/logo.png"}
             alt="Sridhar"
