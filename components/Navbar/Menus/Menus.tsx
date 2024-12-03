@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { Dispatch, SetStateAction, useState, useCallback } from "react";
+import {
+  Dispatch,
+  SetStateAction,
+  useState,
+  useCallback,
+  useEffect,
+} from "react";
 
 interface MenusProps {
   isMenusOpen: boolean;
@@ -9,12 +15,18 @@ interface MenusProps {
 
 export default function Menus({ isMenusOpen, setIsMenusOpen }: MenusProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [audio] = useState(new Audio("/audio/audio-2.mp3"));
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    setAudio(new Audio("/audio/audio-2.mp3"));
+  }, []);
 
   const playHoverSound = useCallback(() => {
-    audio.volume = 0.2;
-    audio.currentTime = 0;
-    audio.play();
+    if (audio) {
+      audio.volume = 0.2;
+      audio.currentTime = 0;
+      audio.play();
+    }
   }, [audio]);
 
   const handleMouseEnter = (index: number) => {

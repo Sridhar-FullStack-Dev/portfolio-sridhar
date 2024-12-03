@@ -72,10 +72,6 @@ img {
   user-select: none;
 }
 
-@font-face {
-  font-family: ATC;
-  src: url("../public/fonts/atc/ATC.ttf");
-}
 
 @font-face {
   font-family: Sarcolenta;
@@ -87,20 +83,12 @@ img {
   src: url("../public/fonts/HouseMontague/HouseMontague.otf");
 }
 
-.atc-font {
-  font-family: "ATC";
-}
-
 .sarcolenta-font {
   font-family: "Sarcolenta";
 }
 
 .houseMontage-font {
   font-family: "HouseMontague";
-}
-
-a {
-  cursor: none;
 }
 
 .custom-cursor {

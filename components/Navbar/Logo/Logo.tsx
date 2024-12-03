@@ -22,16 +22,16 @@ export default function Logo({ isMenusOpen, setIsMenusOpen }: LogoProps) {
         <div className="relative w-10 h-10 overflow-hidden rounded-full animate-pulse">
           <Image
             src={"/logo.png"}
-            alt=""
+            alt="Sridhar"
             height={50}
             width={50}
             priority={true}
             className="w-10 h-10 rounded-full object-cover"
           />
-          <BorderBeam size={20} duration={12} delay={9} />
+          <BorderBeam size={20} duration={10} delay={9} />
         </div>
 
-        <p className="mt-1">Sridhar</p>
+        <p className="mt-1 tracking-widest">Sridhar</p>
       </motion.div>
     </Link>
   );

@@ -16,7 +16,7 @@ export default function Intro() {
           exit={{ y: "-100%" }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
-          <div className="relative h-full w-full bg-alt-black text-alt-white flex justify-center items-center atc-font">
+          <div className="relative h-full w-full bg-alt-black text-alt-white flex justify-center items-center sarcolenta-font">
             <IntroHeading />
             <IntroLoader setLoading={setLoading} loading={loading} />
             <Particles
