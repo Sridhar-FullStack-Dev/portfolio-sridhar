@@ -1,9 +1,8 @@
 import Audio from "@/components/Audio/Audio";
 import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
+import Topbar from "@/components/Topbar/Topbar";
 import type { Metadata } from "next";
 import "./globals.css";
-import Topbar from "@/components/Topbar/Topbar";
-import DotPattern from "@/components/ui/dot-pattern";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sridhar-portfolio.com"),

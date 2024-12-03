@@ -13,7 +13,7 @@ export default function Intro() {
       {loading && (
         <motion.div
           className="fixed h-screen w-screen z-[9999]"
-          exit={{ x: "-100%" }}
+          exit={{ y: "100%" }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
           <div className="relative h-full w-full bg-alt-black text-alt-white flex justify-center items-center atc-font">
