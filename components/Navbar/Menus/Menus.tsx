@@ -9,7 +9,7 @@ interface MenusProps {
 
 export default function Menus({ isMenusOpen, setIsMenusOpen }: MenusProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [audio] = useState(new Audio("/audio/audio.mp3"));
+  const [audio] = useState(new Audio("/audio/audio-2.mp3"));
 
   const playHoverSound = useCallback(() => {
     audio.volume = 0.2;
