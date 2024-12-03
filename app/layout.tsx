@@ -1,6 +1,6 @@
 import Audio from "@/components/Audio/Audio";
 import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
-import Topbar from "@/components/Topbar/Topbar";
+import Navbar from "@/components/Navbar/Navbar";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -65,9 +65,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="antialiased bg-alt-black text-alt-white selection:bg-black selection:text-white houseMontage-font">
+      <body
+        suppressHydrationWarning
+        className=" bg-alt-black text-white selection:bg-white selection:text-black"
+      >
         <SmoothScroll>
-          <Topbar />
+          <Navbar />
           {children}
           <Audio />
         </SmoothScroll>

@@ -4,12 +4,12 @@ import { useRef, useState, useEffect } from "react";
 
 export default function Audio() {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [barColor, setBarColor] = useState("#efefef");
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [barPos, setBarPos] = useState<boolean>(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setBarColor("#efefef");
+      setBarPos(true);
     }, 3000);
 
     return () => clearTimeout(timer);
@@ -29,7 +29,11 @@ export default function Audio() {
   const bars = Array(3).fill(0);
 
   return (
-    <div className="fixed top-10 right-10 flex items-center gap-4 z-10 hidden">
+    <div
+      className={`fixed ${
+        barPos ? "bottom-10 left-10" : "top-10 right-10"
+      } flex items-center gap-4 z-10`}
+    >
       <audio ref={audioRef} src="/audio/audio.mp3" loop />
 
       <div
@@ -40,7 +44,7 @@ export default function Audio() {
           <motion.div
             key={index}
             className={`w-[4px] rounded-full`}
-            style={{ backgroundColor: barColor }}
+            style={{ backgroundColor: "white" }}
             animate={{
               height: "15px",
             }}

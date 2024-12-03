@@ -119,3 +119,12 @@ a {
   align-items: center;
   background-color: white;
 }
+
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
