@@ -2,38 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-img {
-  pointer-events: none;
-  user-select: none;
-}
-
-@font-face {
-  font-family: ATC;
-  src: url("../public/fonts/atc/ATC.ttf");
-}
-
-@font-face {
-  font-family: Sarcolenta;
-  src: url("../public/fonts/sarcolenta/Sarcolenta.ttf");
-}
-
-@font-face {
-  font-family: HouseMontague;
-  src: url("../public/fonts/HouseMontague/HouseMontague.otf");
-}
-
-.atc-font {
-  font-family: "ATC";
-}
-
-.sarcolenta-font {
-  font-family: "Sarcolenta";
-}
-
-.houseMontage-font {
-  font-family: "HouseMontague";
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -97,4 +65,57 @@ img {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
+@font-face {
+  font-family: ATC;
+  src: url("../public/fonts/atc/ATC.ttf");
+}
+
+@font-face {
+  font-family: Sarcolenta;
+  src: url("../public/fonts/sarcolenta/Sarcolenta.ttf");
+}
+
+@font-face {
+  font-family: HouseMontague;
+  src: url("../public/fonts/HouseMontague/HouseMontague.otf");
+}
+
+.atc-font {
+  font-family: "ATC";
+}
+
+.sarcolenta-font {
+  font-family: "Sarcolenta";
+}
+
+.houseMontage-font {
+  font-family: "HouseMontague";
+}
+
+a {
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+  mix-blend-mode: difference;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
 }
