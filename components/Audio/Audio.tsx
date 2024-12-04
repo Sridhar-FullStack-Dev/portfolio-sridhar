@@ -32,7 +32,7 @@ export default function Audio() {
     <div
       className={`fixed ${
         barPos ? "bottom-10 left-10" : "top-10 right-10"
-      } flex items-center gap-4 z-10`}
+      } flex items-center gap-4 z-[99]`}
     >
       <audio ref={audioRef} src="/audio/audio.mp3" loop />
 

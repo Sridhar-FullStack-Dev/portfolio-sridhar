@@ -6,12 +6,13 @@ import Intro from "@/components/Intro/Intro";
 import { Testimonials } from "@/components/Testimonials/Testimonials";
 
 export default function Home() {
+
   return (
     <div>
       <Cursor />
       <Intro />
+      <Hero />
       <Doodle />
-      {/* <Hero /> */}
       {/* <Testimonials /> */}
     </div>
   );
