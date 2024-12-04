@@ -15,7 +15,7 @@ export default function Logo({ isMenusOpen, setIsMenusOpen }: LogoProps) {
       <motion.div
         initial={{ opacity: 0, x: "-50px" }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ ease: "easeInOut", duration: 1, delay: 3 }}
+        transition={{ ease: "easeInOut", duration: 1, delay: 3.5 }}
         title="Sridhar - Portfolio"
         className="houseMontage-font tracking-wide text-3xl relative uppercase flex justify-center items-center gap-2"
       >
