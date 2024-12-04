@@ -83,12 +83,21 @@ img {
   src: url("../public/fonts/HouseMontague/HouseMontague.otf");
 }
 
+@font-face {
+  font-family: Milker;
+  src: url("../public/fonts/Milker/Milker.otf");
+}
+
 .sarcolenta-font {
   font-family: "Sarcolenta";
 }
 
 .houseMontage-font {
   font-family: "HouseMontague";
+}
+
+.milker-font {
+  font-family: "Milker";
 }
 
 .custom-cursor {
@@ -113,6 +122,16 @@ body {
   -ms-overflow-style: none;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
 }
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
