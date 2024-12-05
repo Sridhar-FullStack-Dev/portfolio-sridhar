@@ -1,4 +1,5 @@
 "use client";
+import About from "@/components/About/About";
 import Contact from "@/components/Contact/Contact";
 import Cursor from "@/components/Cursor/Cursor";
 import Doodle from "@/components/Doodle/Doodle";
@@ -13,9 +14,10 @@ export default function Home() {
       <Cursor />
       <Intro />
       <Hero />
+      <About />
       <Doodle />
       <Contact />
-      {/* <Testimonials /> */}
+      <Testimonials />
     </div>
   );
 }
