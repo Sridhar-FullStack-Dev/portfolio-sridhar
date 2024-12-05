@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from "react";
-import { Vortex } from "../ui/vortex";
-import LocomotiveScroll, { ILocomotiveScrollOptions } from "locomotive-scroll";
-import gsap from "gsap";
-import SplitType from "split-type";
 import { motion } from "framer-motion";
+import gsap from "gsap";
+import LocomotiveScroll, { ILocomotiveScrollOptions } from "locomotive-scroll";
+import { useEffect, useRef, useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
+import SplitType from "split-type";
+import { Vortex } from "../ui/vortex";
 
 export default function Hero() {
   const [show, setShow] = useState<boolean>(false);
@@ -58,33 +59,31 @@ export default function Hero() {
           backgroundColor="transparent"
           className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
         >
-          <div>
-            <motion.h1
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ ease: "easeIn", delay: 2 }}
-              ref={textRef}
-              data-scroll
-              data-scroll-speed="0.2"
-              className="px-32 text-8xl text-center houseMontage-font uppercase"
-            >
-              Hurray!
-            </motion.h1>
-          </div>
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeIn", delay: 2 }}
+            ref={textRef}
+            className="px-32 text-8xl text-center houseMontage-font uppercase"
+          >
+            Hurray!
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeIn", delay: 2.2 }}
+            className="text-2xl text-center w-96 sarcolenta-font tracking-wider capitalize"
+          >
+            You've reached the right spot to develop your business idea to the
+            world wide
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ ease: "easeIn", delay: 2.2 }}
+            transition={{ ease: "easeIn", delay: 2.5 }}
           >
-            <p
-              data-scroll
-              data-scroll-speed="0.1"
-              className="text-2xl text-center w-96 sarcolenta-font tracking-wider capitalize"
-            >
-              You've reached the right spot to develop your business idea to the
-              world wide
-            </p>
+            <IoIosArrowDown className="animate-bounce mt-5 text-xl" />
           </motion.div>
         </Vortex>
       )}
