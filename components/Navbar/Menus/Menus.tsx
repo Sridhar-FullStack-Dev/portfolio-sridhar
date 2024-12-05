@@ -41,7 +41,7 @@ export default function Menus({ isMenusOpen, setIsMenusOpen }: MenusProps) {
   return (
     <AnimatePresence mode="wait">
       {isMenusOpen && (
-        <div className="fixed left-10 top-32 h-[80vh] backdrop-blur-sm houseMontage-font z-10">
+        <div className="fixed left-0 top-20 pl-10 pt-10 h-screen backdrop-blur-sm houseMontage-font z-10">
           <div className="flex flex-col gap-8 text-8xl font-medium">
             {menuItem.map((menu, menuIndex) => (
               <motion.div

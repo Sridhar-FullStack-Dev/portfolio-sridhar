@@ -1,6 +1,4 @@
-import { BorderBeam } from "@/components/ui/border-beam";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
 

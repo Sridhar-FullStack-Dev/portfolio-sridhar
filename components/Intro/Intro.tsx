@@ -30,7 +30,7 @@ export default function Intro() {
         }
         return prev + 1;
       });
-    }, 30);
+    }, 22);
 
     return () => {
       clearTimeout(showTimer);
