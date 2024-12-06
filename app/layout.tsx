@@ -65,10 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        suppressHydrationWarning
-        className=" bg-alt-black text-white selection:bg-white selection:text-black cursor-none"
-      >
+      <body suppressHydrationWarning className=" bg-alt-black text-white selection:bg-white selection:text-black cursor-none">
         <SmoothScroll>
           <Navbar />
           {children}

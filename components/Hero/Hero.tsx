@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import gsap from "gsap";
-import LocomotiveScroll, { ILocomotiveScrollOptions } from "locomotive-scroll";
 import { useEffect, useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import SplitType from "split-type";
@@ -8,15 +7,9 @@ import { Vortex } from "../ui/vortex";
 
 export default function Hero() {
   const [show, setShow] = useState<boolean>(false);
-  const heroLocoRef = useRef<HTMLHeadingElement>(null);
   const textRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container]") as HTMLElement,
-      smooth: true,
-    } as ILocomotiveScrollOptions);
-
     const text = new SplitType(textRef.current!, {
       types: "chars",
     });
@@ -30,10 +23,6 @@ export default function Hero() {
       ease: "power4.out",
       delay: 3,
     });
-
-    return () => {
-      if (scroll) scroll.destroy();
-    };
   }, []);
 
   useEffect(() => {
@@ -51,7 +40,6 @@ export default function Hero() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeInOut", duration: 1 }}
-      ref={heroLocoRef}
       className="h-screen w-screen overflow-hidden"
     >
       {show && (
