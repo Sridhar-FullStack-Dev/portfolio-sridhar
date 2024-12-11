@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { BorderBeam } from "../ui/border-beam";
 import GradualSpacing from "../ui/gradual-spacing";
 
 export default function About() {

@@ -18,8 +18,8 @@ export default function Home() {
       <About />
       <Services />
       <Doodle />
-      <Contact />
       <Testimonials />
+      <Contact />
     </div>
   );
 }
