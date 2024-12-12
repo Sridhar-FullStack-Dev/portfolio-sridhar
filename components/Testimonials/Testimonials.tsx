@@ -1,11 +1,31 @@
 "use client";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import { motion } from "framer-motion";
 
 export function Testimonials() {
-  return <AnimatedTestimonials testimonials={testimonials} />;
+  return (
+    <div className="text-white houseMontage-font">
+      <motion.h1
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 0.5 }}
+        transition={{ ease: "linear", delay: 0.3, duration: 1 }}
+        className="sm:text-7xl md:text-8xl houseMontage-font text-center tracking-wider p-4"
+      >
+        Testimonials
+      </motion.h1>
+      <AnimatedTestimonials testimonials={testimonials} />
+    </div>
+  );
 }
 
-const testimonials = [
+interface Testimonial {
+  quote: string;
+  name: string;
+  designation: string;
+  src: string;
+}
+
+const testimonials: Testimonial[] = [
   {
     quote:
       "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
