@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { boolean, z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -13,6 +13,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { useState } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -22,22 +25,49 @@ const formSchema = z.object({
     message: "Please enter a valid email address.",
   }),
   hcwh: z.string().optional(),
+  services: z.array(z.string()).nonempty({
+    message: "Please select at least one service.",
+  }),
 });
 
 export default function Left() {
+  const [isContactLoading, setIsContactLoading] = useState<boolean>(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
+      services: [],
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsContactLoading(true);
+    try {
+      const response = await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        toast.success("Message sent successfully!");
+        form.reset();
+      } else {
+        toast.error("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setIsContactLoading(false);
+    }
   }
+
   return (
-    <div className="w-1/2 flex flex-col justify-center items-start p-32">
+    <div className="w-1/2 flex flex-col justify-center items-start px-32 py-12">
       <h1 className="tracking-wide capitalize text-center text-6xl">
         Let's chat about your dream & wild ideas
       </h1>
@@ -106,11 +136,70 @@ export default function Left() {
             )}
           />
 
+          <FormField
+            control={form.control}
+            name="services"
+            render={() => (
+              <FormItem className="flex items-center justify-between gap-2 text-xs">
+                {servicesItems.map((item) => (
+                  <FormField
+                    key={item.id}
+                    control={form.control}
+                    name="services"
+                    render={({ field }) => {
+                      return (
+                        <FormItem
+                          key={item.id}
+                          className="flex flex-row items-start space-x-3 space-y-0"
+                        >
+                          <FormControl>
+                            <Checkbox
+                              checked={field.value?.includes(item.id)}
+                              onCheckedChange={(checked) => {
+                                return checked
+                                  ? field.onChange([
+                                      ...(field.value || []),
+                                      item.id,
+                                    ])
+                                  : field.onChange(
+                                      field.value?.filter(
+                                        (value: string) => value !== item.id
+                                      )
+                                    );
+                              }}
+                            />
+                          </FormControl>
+                          <FormLabel className="font-normal">
+                            {item.label}
+                          </FormLabel>
+                        </FormItem>
+                      );
+                    }}
+                  />
+                ))}
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
           <Button type="submit" className="w-full">
-            Submit
+            {isContactLoading ? "Sending..." : "Send"}
           </Button>
         </form>
       </Form>
     </div>
   );
 }
+
+interface ServicesItem {
+  id: string;
+  label: string;
+}
+
+const servicesItems: ServicesItem[] = [
+  { id: "website", label: "Website Development" },
+  { id: "mobile", label: "Mobile App Development" },
+  { id: "design", label: "UI/UX Design" },
+  { id: "consulting", label: "Technical Consulting" },
+  { id: "other", label: "Other services" },
+];
