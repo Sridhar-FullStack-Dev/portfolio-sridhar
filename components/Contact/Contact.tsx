@@ -20,8 +20,9 @@ export default function Contact() {
       });
     });
   }, []);
+
   return (
-    <div ref={container}>
+    <div ref={container} id="contact" className="h-full">
       <SVGCurve paths={paths} />
       <ContactForm />
     </div>
