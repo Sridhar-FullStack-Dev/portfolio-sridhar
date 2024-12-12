@@ -37,7 +37,7 @@ export default function Left() {
     console.log(values);
   }
   return (
-    <div className="w-1/2 flex flex-col justify-center items-start p-32 ">
+    <div className="w-1/2 flex flex-col justify-center items-start p-32">
       <h1 className="tracking-wide capitalize text-center text-6xl">
         Let's chat about your dream & wild ideas
       </h1>

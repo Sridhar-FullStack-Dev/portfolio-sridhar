@@ -3,8 +3,8 @@ import Right from "./Right/Right";
 
 export default function ContactForm() {
   return (
-    <div className="houseMontage-font bg-alt-white text-black h-full">
-      <div className="flex justify-between items-center">
+    <div className="houseMontage-font bg-alt-white text-black h-screen">
+      <div className="flex justify-between items-center h-full">
         <Left />
         <Right />
       </div>
