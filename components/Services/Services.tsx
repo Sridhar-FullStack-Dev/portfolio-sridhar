@@ -15,14 +15,12 @@ export default function Services() {
     };
   }, []);
   return (
-    <div ref={servicesLocoRef}>
-      {/* <div data-sccroll data-scroll-speed="1">
-        <VelocityScroll
-          text="SERVICES"
-          default_velocity={1}
-          className="text-center text-4xl font-bold tracking-[-0.02em] dark:text-white md:text-7xl md:leading-[5rem]"
-        />
-      </div> */}
+    <div id="services" ref={servicesLocoRef} className="mt-8">
+      <VelocityScroll
+        text="✦ Services"
+        default_velocity={3}
+        className="text-4xl milker-font py-4 bg-alt-white text-alt-black"
+      />
     </div>
   );
 }

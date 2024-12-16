@@ -7,13 +7,19 @@ import {
   useCallback,
   useEffect,
 } from "react";
+import { useLenis } from "lenis/react";
 
 interface MenusProps {
   isMenusOpen: boolean;
+  isContactSection: boolean;
   setIsMenusOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-export default function Menus({ isMenusOpen, setIsMenusOpen }: MenusProps) {
+export default function Menus({
+  isMenusOpen,
+  setIsMenusOpen,
+  isContactSection,
+}: MenusProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
 
@@ -38,6 +44,7 @@ export default function Menus({ isMenusOpen, setIsMenusOpen }: MenusProps) {
     setHoveredIndex(null);
   };
 
+  const lenis = useLenis();
   return (
     <AnimatePresence mode="wait">
       {isMenusOpen && (
@@ -64,7 +71,10 @@ export default function Menus({ isMenusOpen, setIsMenusOpen }: MenusProps) {
                 className="w-fit"
               >
                 <Link
-                  onClick={() => setIsMenusOpen(!isMenusOpen)}
+                  onClick={() => {
+                    setIsMenusOpen(!isMenusOpen);
+                    lenis?.scrollTo(`${menu.href}`, { lerp: 0.02 });
+                  }}
                   href={menu.href}
                 >
                   <motion.span
@@ -73,6 +83,7 @@ export default function Menus({ isMenusOpen, setIsMenusOpen }: MenusProps) {
                       opacity: hoveredIndex === menuIndex ? 1 : 0.2,
                     }}
                     transition={{ duration: 0.3 }}
+                    className={`${isContactSection ? "text-black" : "text-white"}`}
                   >
                     {menu.name}
                   </motion.span>
@@ -106,19 +117,19 @@ const menuItem: MenuItem[] = [
     name: "Home",
   },
   {
-    href: "/",
+    href: "#about",
     name: "About",
   },
   {
-    href: "/",
+    href: "#services",
     name: "Services",
   },
   {
-    href: "/",
+    href: "#projects",
     name: "Projects",
   },
   {
-    href: "/",
+    href: "#contacts",
     name: "Contacts",
   },
 ];

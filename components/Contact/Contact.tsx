@@ -22,7 +22,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <div ref={container} id="contact" className="h-full">
+    <div ref={container} id="contacts" className="h-full">
       <SVGCurve paths={paths} />
       <ContactForm />
     </div>

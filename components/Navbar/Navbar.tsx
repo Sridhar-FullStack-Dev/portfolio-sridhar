@@ -19,10 +19,25 @@ export default function Navbar() {
 
   const [isMenusOpen, setIsMenusOpen] = useState<boolean>(false);
 
+  const [isContactSection, setIsContactSection] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const contactSection = document.getElementById("contacts");
+      if (contactSection) {
+        const rect = contactSection.getBoundingClientRect();
+        setIsContactSection(rect.top <= 0 && rect.bottom >= 0);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="fixed top-10 w-full flex justify-between items-center px-10 z-10">
-      <Logo isMenusOpen={isMenusOpen} setIsMenusOpen={setIsMenusOpen} />
-      <Menus isMenusOpen={isMenusOpen} setIsMenusOpen={setIsMenusOpen} />
+      <Logo isMenusOpen={isMenusOpen} setIsMenusOpen={setIsMenusOpen} isContactSection={isContactSection} />
+      <Menus isMenusOpen={isMenusOpen} setIsMenusOpen={setIsMenusOpen} isContactSection={isContactSection} />
       <CollaborateBtn />
     </div>
   );

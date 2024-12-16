@@ -4,25 +4,15 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 interface LogoProps {
   isMenusOpen: boolean;
+  isContactSection: boolean;
   setIsMenusOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-export default function Logo({ isMenusOpen, setIsMenusOpen }: LogoProps) {
-  const [isContactSection, setIsContactSection] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const contactSection = document.getElementById("contact");
-      if (contactSection) {
-        const rect = contactSection.getBoundingClientRect();
-        setIsContactSection(rect.top <= 0 && rect.bottom >= 0);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+export default function Logo({
+  isMenusOpen,
+  setIsMenusOpen,
+  isContactSection,
+}: LogoProps) {
   return (
     <Link onClick={() => setIsMenusOpen(!isMenusOpen)} href={"/"}>
       <motion.div

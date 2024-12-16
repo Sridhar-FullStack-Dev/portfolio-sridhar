@@ -3,7 +3,7 @@ import GradualSpacing from "../ui/gradual-spacing";
 
 export default function About() {
   return (
-    <div className="text-white houseMontage-font">
+    <div id="about" className="text-white houseMontage-font">
       <motion.h1
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.5 }}
