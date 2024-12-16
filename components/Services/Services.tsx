@@ -1,6 +1,8 @@
-import { useEffect, useRef } from "react";
+"use client";
 import LocomotiveScroll, { ILocomotiveScrollOptions } from "locomotive-scroll";
+import { useEffect, useRef } from "react";
 import { VelocityScroll } from "../ui/scroll-based-velocity";
+
 export default function Services() {
   const servicesLocoRef = useRef<HTMLHeadingElement>(null);
 
@@ -14,6 +16,7 @@ export default function Services() {
       if (scroll) scroll.destroy();
     };
   }, []);
+
   return (
     <div id="services" ref={servicesLocoRef} className="mt-8">
       <VelocityScroll
@@ -21,6 +24,8 @@ export default function Services() {
         default_velocity={3}
         className="text-4xl milker-font py-4 bg-alt-white text-alt-black"
       />
+
+      <div></div>
     </div>
   );
 }

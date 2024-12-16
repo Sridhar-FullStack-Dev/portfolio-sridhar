@@ -65,11 +65,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        suppressHydrationWarning
-        className=" bg-alt-black text-white selection:bg-white selection:text-black cursor-none"
-      >
+    <html lang="en">
+      <body className="bg-alt-black text-white selection:bg-white selection:text-black cursor-none antialiased">
         <SmoothScroll>
           <Navbar />
           {children}

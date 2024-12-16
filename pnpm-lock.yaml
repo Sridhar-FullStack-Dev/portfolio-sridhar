@@ -65,6 +65,9 @@ importers:
       lucide-react:
         specifier: ^0.462.0
         version: 0.462.0(react@19.0.0-rc-66855b96-20241106)
+      maath:
+        specifier: ^0.10.8
+        version: 0.10.8(@types/three@0.170.0)(three@0.171.0)
       next:
         specifier: 15.0.3
         version: 15.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
@@ -101,6 +104,9 @@ importers:
       three:
         specifier: ^0.171.0
         version: 0.171.0
+      valtio:
+        specifier: ^2.1.2
+        version: 2.1.2(@types/react@18.3.12)(react@19.0.0-rc-66855b96-20241106)
       zod:
         specifier: ^3.24.1
         version: 3.24.1
@@ -1139,6 +1145,9 @@ packages:
   prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
 
+  proxy-compare@3.0.1:
+    resolution: {integrity: sha512-V9plBAt3qjMlS1+nC8771KNf6oJ12gExvaxnNzN/9yVRLdTv/lc+oJlnSzrdYDAvBfTStPCoiaCOTmTs0adv7Q==}
+
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
@@ -1399,6 +1408,18 @@ packages:
   uuid@9.0.1:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
     hasBin: true
+
+  valtio@2.1.2:
+    resolution: {integrity: sha512-fhekN5Rq7dvHULHHBlJeXHrQDl0Jj9GXfNavCm3gkD06crGchaG1nf/J7gSlfZU2wPcRdVS5jBKWHtE2NNz97A==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=18.0.0'
+      react: '>=18.0.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      react:
+        optional: true
 
   webgl-constants@1.1.1:
     resolution: {integrity: sha512-LkBXKjU5r9vAW7Gcu3T5u+5cvSvh5WwINdr0C+9jpzVB41cjQAP5ePArDtk/WHYdVj0GefCgM73BA7FlIiNtdg==}
@@ -2359,6 +2380,8 @@ snapshots:
       object-assign: 4.1.1
       react-is: 16.13.1
 
+  proxy-compare@3.0.1: {}
+
   queue-microtask@1.2.3: {}
 
   react-composer@5.0.3(react@19.0.0-rc-66855b96-20241106):
@@ -2633,6 +2656,13 @@ snapshots:
   utility-types@3.11.0: {}
 
   uuid@9.0.1: {}
+
+  valtio@2.1.2(@types/react@18.3.12)(react@19.0.0-rc-66855b96-20241106):
+    dependencies:
+      proxy-compare: 3.0.1
+    optionalDependencies:
+      '@types/react': 18.3.12
+      react: 19.0.0-rc-66855b96-20241106
 
   webgl-constants@1.1.1: {}
 
