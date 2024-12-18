@@ -17,9 +17,9 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
-      <Doodle />
       <Testimonials />
       <Contact />
+      <Doodle /> 
       <Footer />
     </div>
   );

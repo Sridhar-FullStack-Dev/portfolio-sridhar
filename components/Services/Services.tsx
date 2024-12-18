@@ -1,31 +1,27 @@
-"use client";
-import LocomotiveScroll, { ILocomotiveScrollOptions } from "locomotive-scroll";
-import { useEffect, useRef } from "react";
+'use client'
+import { useScroll, useSpring, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { VelocityScroll } from "../ui/scroll-based-velocity";
 
 export default function Services() {
-  const servicesLocoRef = useRef<HTMLHeadingElement>(null);
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end end"],
+  });
 
-  useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container]") as HTMLElement,
-      smooth: true,
-    } as ILocomotiveScrollOptions);
-
-    return () => {
-      if (scroll) scroll.destroy();
-    };
-  }, []);
-
+  const progress = useTransform(scrollYProgress, [0, 1], [0, 5]);
+  const smoothProgress = useSpring(progress, { damping: 20 });
   return (
-    <div id="services" ref={servicesLocoRef} className="mt-8">
+    <div id="services" className="mt-8">
       <VelocityScroll
         text="✦ Services"
         default_velocity={3}
         className="text-4xl milker-font py-4 bg-alt-white text-alt-black"
       />
 
-      <div></div>
+      <div style={{ height: "500px" }}>
+      </div>
     </div>
   );
 }
