@@ -4,8 +4,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import { VelocityScroll } from "../ui/scroll-based-velocity-2";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function Footer() {
   const textRef = useRef<HTMLHeadingElement>(null);
 
@@ -52,7 +50,7 @@ export default function Footer() {
         sridhar
       </h1>
       <VelocityScroll
-        text="✦ Footer"
+        text="❃ Footer"
         default_velocity={3}
         className="text-4xl milker-font py-4 bg-alt-white text-alt-black"
       />

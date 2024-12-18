@@ -8,15 +8,20 @@ import Hero from "@/components/Hero/Hero";
 import Intro from "@/components/Intro/Intro";
 import Services from "@/components/Services/Services";
 import Testimonials from "@/components/Testimonials/Testimonials";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   return (
     <div>
       <Cursor />
       <Intro />
-      <Hero />
+      <Hero /> 
       <About />
-      <Services />
+       <Services />
       <Testimonials />
       <Contact />
       <Doodle /> 

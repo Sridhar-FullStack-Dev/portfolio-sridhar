@@ -104,6 +104,9 @@ importers:
       three:
         specifier: ^0.171.0
         version: 0.171.0
+      use-outside-click:
+        specifier: link:@/hooks/use-outside-click
+        version: link:@/hooks/use-outside-click
       valtio:
         specifier: ^2.1.2
         version: 2.1.2(@types/react@18.3.12)(react@19.0.0-rc-66855b96-20241106)

@@ -1,34 +1,56 @@
-import { motion } from "framer-motion";
-import GradualSpacing from "../ui/gradual-spacing";
+import gsap from "gsap";
+import { useEffect, useRef } from "react";
+import SplitType from "split-type";
+import CardCarousel from "./CardCarousel/CardCarousel";
 
 export default function About() {
+  const aboutTextRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    if (!aboutTextRef.current) return;
+
+    const split = new SplitType(aboutTextRef.current, {
+      types: "chars",
+      absolute: false,
+    });
+
+    gsap.fromTo(
+      split.chars,
+      {
+        y: 100,
+        opacity: 0,
+        rotationX: -90,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        rotationX: 0,
+        duration: 1,
+        stagger: 0.02,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: aboutTextRef.current,
+          start: "top 80%",
+          end: "top 20%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    return () => split.revert();
+  }, []);
+
   return (
-    <div id="about" className="text-white houseMontage-font">
-      <motion.h1
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.5 }}
-        transition={{ ease: "linear", delay: 0.3, duration: 1 }}
-        className="sm:text-7xl md:text-8xl houseMontage-font text-center tracking-wider p-4"
+    <div id="about" className="text-alt-white houseMontage-font">
+      <h1
+        ref={aboutTextRef}
+        className="sm:text-7xl md:text-8xl houseMontage-font text-center tracking-wider p-4 opacity-75"
       >
         ABOUT
-      </motion.h1>
+      </h1>
 
-      <div className="flex justify-between items-start container mt-14">
-        <div className="w-1/2 flex justify-center items-center">
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition={{ ease: "easeInOut", duration: 1, delay: 0.3 }}
-            className="bg-alt-white rounded-full relative h-[40rem] w-96"
-          ></motion.div>
-        </div>
-
-        <div className="w-1/2">
-          <GradualSpacing
-            className="font-display text-center text-lg font-bold -tracking-widest text-white md:text-7xl md:leading-[5rem]"
-            text="Gradual Spacing"
-          />
-        </div>
+      <div className="container mt-14">
+        <CardCarousel />
       </div>
     </div>
   );
