@@ -32,37 +32,39 @@ export default function CardCarousel() {
   }, []);
 
   return (
-    <div ref={sectionRef} className="h-screen">
-      <div>
-        <div
-          ref={carouselRef}
-          className="flex items-center justify-start gap-8 ml-[10%]"
-        >
-          {cardCarouselData.map((cards, cardsIndex) => {
-            return (
-              <div
-                key={cardsIndex}
-                className="h-[45rem] w-[25rem] rounded-3xl overflow-hidden relative flex-shrink-0"
-              >
-                <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-black/50 to-white/10" />
+    <div className="container mt-14">
+      <div ref={sectionRef} className="h-screen">
+        <div>
+          <div
+            ref={carouselRef}
+            className="flex items-center justify-start gap-8 ml-[10%]"
+          >
+            {cardCarouselData.map((cards, cardsIndex) => {
+              return (
+                <div
+                  key={cardsIndex}
+                  className="h-[45rem] w-[25rem] rounded-3xl overflow-hidden relative flex-shrink-0"
+                >
+                  <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-black/50 to-white/10" />
 
-                <Image
-                  src={cards.src}
-                  alt={cards.heading}
-                  height={1920}
-                  width={2880}
-                  priority={true}
-                  className="h-full w-full object-cover"
-                />
+                  <Image
+                    src={cards.src}
+                    alt={cards.heading}
+                    height={1920}
+                    width={2880}
+                    priority={true}
+                    className="h-full w-full object-cover"
+                  />
 
-                <div className="absolute top-10 left-10 z-10 text-white">
-                  <h1 className="text-6xl sarcolenta-font lowercase">
-                    {cards.heading}
-                  </h1>
+                  <div className="absolute top-10 left-10 z-10 text-white">
+                    <h1 className="text-6xl sarcolenta-font lowercase">
+                      {cards.heading}
+                    </h1>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
