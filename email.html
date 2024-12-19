@@ -1,23 +1,4 @@
-import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
-
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASSWORD,
-  },
-});
-
-export async function POST(request: Request) {
-  const { name, email, hcwh, services } = await request.json();
-
-  try {
-    await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
-      subject: `New Contact Form Submission from ${name}`,
-      html: `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -89,34 +70,17 @@ export async function POST(request: Request) {
         </div>
         <div class="content">
             <h2>Message Details</h2>
-            <p>${new Date()}</p>
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
             <p><strong>Message:</strong> ${hcwh || "No message provided"}</p>
             <h3>Services Interested In:</h3>
             <ul>
-                ${services
-                  .map((service: string) => `<li>${service}</li>`)
-                  .join("")}
+                ${services.map((service) => `<li>${service}</li>`).join("")}
             </ul>
         </div>
         <div class="footer">
-            <p>Sridhar&trade; | All rights reserved.</p>
+            <p>&copy; 2024 Sridhar&trade; | All rights reserved.</p>
         </div>
     </div>
 </body>
 </html>
-      `,
-    });
-
-    return NextResponse.json(
-      { message: "Email sent successfully" },
-      { status: 200 }
-    );
-  } catch (error) {
-    return NextResponse.json(
-      { message: "Error sending email" },
-      { status: 500 }
-    );
-  }
-}

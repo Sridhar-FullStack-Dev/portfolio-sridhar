@@ -37,6 +37,7 @@ export default function Left() {
     defaultValues: {
       name: "",
       email: "",
+      hcwh: "", 
       services: [],
     },
   });

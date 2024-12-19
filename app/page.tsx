@@ -11,7 +11,6 @@ import Testimonials from "@/components/Testimonials/Testimonials";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -19,12 +18,12 @@ export default function Home() {
     <div>
       <Cursor />
       <Intro />
-      <Hero /> 
+      <Hero />
       <About />
-       <Services />
+      <Services />
       <Testimonials />
       <Contact />
-      <Doodle /> 
+      <Doodle />
       <Footer />
     </div>
   );
