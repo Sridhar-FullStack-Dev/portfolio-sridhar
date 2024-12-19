@@ -1,24 +1,10 @@
 "use client";
-import gsap from "gsap";
-import { useEffect, useRef, useState } from "react";
-import CollaborateBtn from "./CollaborateBtn/CollaborateBtn";
+import { useEffect, useState } from "react";
 import Logo from "./Logo/Logo";
 import Menus from "./Menus/Menus";
+import More from "./More/More";
 
 export default function Navbar() {
-  const asteriskRef = useRef(null);
-
-  useEffect(() => {
-    gsap.to(asteriskRef.current, {
-      rotation: 360,
-      duration: 4,
-      repeat: -1,
-      ease: "linear",
-    });
-  }, []);
-
-  const [isMenusOpen, setIsMenusOpen] = useState<boolean>(false);
-
   const [isContactSection, setIsContactSection] = useState(false);
 
   useEffect(() => {
@@ -35,10 +21,10 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="fixed top-10 w-full flex justify-between items-center px-10 z-10">
-      <Logo isMenusOpen={isMenusOpen} setIsMenusOpen={setIsMenusOpen} isContactSection={isContactSection} />
-      <Menus isMenusOpen={isMenusOpen} setIsMenusOpen={setIsMenusOpen} isContactSection={isContactSection} />
-      <CollaborateBtn />
+    <div className="fixed top-0 w-full flex justify-between items-center px-10 py-1.5 z-10 border-b-2 border-alt-white bg-transparent backdrop-blur-sm overflow-hidden">
+      <Logo isContactSection={isContactSection} />
+      <Menus isContactSection={isContactSection} />
+      <More isContactSection={isContactSection} />
     </div>
   );
 }
