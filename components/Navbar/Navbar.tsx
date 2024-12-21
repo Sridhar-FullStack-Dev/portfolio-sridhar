@@ -24,7 +24,7 @@ export default function Navbar() {
     <div className="fixed top-0 w-full flex justify-between items-center px-10 py-1.5 z-10 border-b-2 border-alt-white bg-transparent backdrop-blur-sm overflow-hidden">
       <Logo isContactSection={isContactSection} />
       <Menus isContactSection={isContactSection} />
-      <More isContactSection={isContactSection} />
+      <More/>
     </div>
   );
 }

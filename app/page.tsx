@@ -18,7 +18,7 @@ export default function Home() {
     <div>
       <Cursor />
       <Intro />
-      <Hero />
+      {/* <Hero /> */}
       <About />
       <Services />
       <Testimonials />
