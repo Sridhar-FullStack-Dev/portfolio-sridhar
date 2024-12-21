@@ -57,7 +57,7 @@ export default function CardCarousel() {
                   />
 
                   <div className="absolute top-10 left-10 z-10 text-white">
-                    <h1 className="text-6xl sarcolenta-font lowercase">
+                    <h1 className="text-6xl sarcolenta-font capitalize">
                       {cards.heading}
                     </h1>
                   </div>
@@ -80,52 +80,42 @@ interface CardCarouselData {
 const cardCarouselData: CardCarouselData[] = [
   {
     src: "https://images.pexels.com/photos/4195342/pexels-photo-4195342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    heading: "entreprenuer",
+    heading: "Web development",
     description: "",
   },
   {
     src: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    heading: "developer",
+    heading: "Web Application development",
     description: "",
   },
   {
     src: "https://images.pexels.com/photos/2047914/pexels-photo-2047914.jpeg?auto=compress&cs=tinysrgb&w=600",
-    heading: "designer",
-    description: "",
-  },
-  {
-    src: "https://images.pexels.com/photos/5439460/pexels-photo-5439460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    heading: "friendliness",
-    description: "",
-  },
-  {
-    src: "https://images.pexels.com/photos/433333/pexels-photo-433333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    heading: "trending",
+    heading: "Branding",
     description: "",
   },
   {
     src: "https://images.pexels.com/photos/2047914/pexels-photo-2047914.jpeg?auto=compress&cs=tinysrgb&w=600",
-    heading: "designer",
+    heading: "Digital Marketing",
     description: "",
   },
   {
-    src: "https://images.pexels.com/photos/5439460/pexels-photo-5439460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    heading: "friendliness",
+    src: "https://images.pexels.com/photos/2047914/pexels-photo-2047914.jpeg?auto=compress&cs=tinysrgb&w=600",
+    heading: "Content Creation",
     description: "",
   },
   {
-    src: "https://images.pexels.com/photos/433333/pexels-photo-433333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    heading: "trending",
+    src: "https://images.pexels.com/photos/2047914/pexels-photo-2047914.jpeg?auto=compress&cs=tinysrgb&w=600",
+    heading: "Content Creation",
     description: "",
   },
   {
-    src: "https://images.pexels.com/photos/5439460/pexels-photo-5439460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    heading: "friendliness",
+    src: "https://images.pexels.com/photos/2047914/pexels-photo-2047914.jpeg?auto=compress&cs=tinysrgb&w=600",
+    heading: "Content Creation",
     description: "",
   },
   {
-    src: "https://images.pexels.com/photos/433333/pexels-photo-433333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    heading: "trending",
+    src: "https://images.pexels.com/photos/2047914/pexels-photo-2047914.jpeg?auto=compress&cs=tinysrgb&w=600",
+    heading: "Content Creation",
     description: "",
   },
 ];

@@ -2,7 +2,7 @@ import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 import AboutScroll from "./AboutScroll/AboutScroll";
-import CardCarousel from "./CardCarousel/CardCarousel";
+import CardCarousel from "../Services/CardCarousel/CardCarousel";
 
 export default function About() {
   const aboutTextRef = useRef<HTMLHeadingElement>(null);
@@ -49,9 +49,6 @@ export default function About() {
       >
         ABOUT
       </h1>
-
-      <CardCarousel />
-
       <AboutScroll />
     </div>
   );
