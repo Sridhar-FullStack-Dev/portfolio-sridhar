@@ -72,7 +72,7 @@ export default function QuoteSection() {
     <div className="grid grid-cols-5 relative h-screen">
       <h1
         ref={headingRef}
-        className="text-[7rem] leading-none z-10 tracking-wide milker-font font-bold text-center uppercase w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-75"
+        className="text-[7rem] leading-none z-10 tracking-wide milker-font font-bold text-center uppercase w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       >
         The best way to predict the future is to create it
       </h1>
