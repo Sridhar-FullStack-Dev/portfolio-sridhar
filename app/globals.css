@@ -72,7 +72,6 @@ img {
   user-select: none;
 }
 
-
 @font-face {
   font-family: Sarcolenta;
   src: url("../public/fonts/sarcolenta/Sarcolenta.ttf");
@@ -124,6 +123,8 @@ img {
 body {
   scrollbar-width: none;
   -ms-overflow-style: none;
+  background-image: url("/noise.png");
+  background-position: center;
 }
 
 ::-webkit-scrollbar {
@@ -138,4 +139,3 @@ body {
     transform: translateX(0);
   }
 }
-
