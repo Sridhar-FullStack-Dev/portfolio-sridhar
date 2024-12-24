@@ -49,7 +49,7 @@ export default function ParallaxSection() {
         <div
           data-scroll
           data-scroll-speed="0.5"
-          className="absolute top-1/2 -left-20 text-8xl"
+          className="absolute top-1/2 -left-20 text-8xl px-4"
         >
           Vision
         </div>

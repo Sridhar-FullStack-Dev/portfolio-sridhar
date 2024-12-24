@@ -19,7 +19,6 @@ export default function AboutScroll() {
   return (
     <div ref={aboutLocoRef} data-scroll-container className="px-32">
       <ParallaxSection />
-
       <QuoteSection />
     </div>
   );

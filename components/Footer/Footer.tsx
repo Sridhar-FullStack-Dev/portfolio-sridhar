@@ -1,6 +1,5 @@
-import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 import { VelocityScroll } from "../ui/scroll-based-velocity-2";
 

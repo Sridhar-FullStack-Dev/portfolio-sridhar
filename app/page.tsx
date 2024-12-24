@@ -15,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   return (
-    <div>
+    <main>
       <Cursor />
       <Intro />
       <Hero />
@@ -25,6 +25,6 @@ export default function Home() {
       <Contact />
       <Doodle />
       <Footer />
-    </div>
+    </main>
   );
 }

@@ -2,7 +2,7 @@ import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 import AboutScroll from "./AboutScroll/AboutScroll";
-import CardCarousel from "../Services/CardCarousel/CardCarousel";
+import CardCarousel from "../Testimonials/CardCarousel/CardCarousel";
 
 export default function About() {
   const aboutTextRef = useRef<HTMLHeadingElement>(null);
@@ -45,7 +45,7 @@ export default function About() {
     <div id="about" className="text-alt-white houseMontage-font">
       <h1
         ref={aboutTextRef}
-        className="sm:text-7xl md:text-8xl houseMontage-font text-center tracking-wider p-4 opacity-75"
+        className="milker-font text-8xl uppercase perspective-1000 text-alt-white pl-32"
       >
         ABOUT
       </h1>
