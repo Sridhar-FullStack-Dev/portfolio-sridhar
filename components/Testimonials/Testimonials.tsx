@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
+import TestimonialsCard from "./TestimonialsCard/TestimonialsCard";
 
 export default function Testimonials() {
   const testimonialsTextRef = useRef<HTMLHeadingElement>(null);
@@ -48,14 +49,7 @@ export default function Testimonials() {
         Testimonials
       </h1>
 
-      <div className="px-16 mt-8 grid grid-cols-5 gap-8">
-        <div className="h-96 w-auto bg-alt-white rounded-3xl overflow-hidden">
-          <video preload="none" className="h-full w-full">
-            <source src="/Testimonials/video.mp4" type="video/mp4" />
-            Your browser does not support the videos.
-          </video>
-        </div>
-      </div>
+      <TestimonialsCard />
     </div>
   );
 }
