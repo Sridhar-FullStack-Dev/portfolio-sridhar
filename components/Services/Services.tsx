@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { VelocityScroll } from "../ui/scroll-based-velocity";
 import LocomotiveScroll, { ILocomotiveScrollOptions } from "locomotive-scroll";
+import CardCarousel from "./CardCarousel/CardCarousel";
 
 export default function Services() {
   const servicesLocoRef = useRef<HTMLHeadingElement>(null);
@@ -29,6 +30,8 @@ export default function Services() {
         default_velocity={3}
         className="text-4xl milker-font py-4 bg-alt-white text-alt-black"
       />
+
+      <CardCarousel />
     </div>
   );
 }

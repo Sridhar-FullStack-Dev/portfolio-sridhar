@@ -1,7 +1,6 @@
-import SplitType from "split-type";
-import CardCarousel from "./CardCarousel/CardCarousel";
-import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { useEffect, useRef } from "react";
+import SplitType from "split-type";
 
 export default function Testimonials() {
   const testimonialsTextRef = useRef<HTMLHeadingElement>(null);
@@ -48,7 +47,6 @@ export default function Testimonials() {
       >
         Testimonials
       </h1>
-      <CardCarousel />
     </div>
   );
 }

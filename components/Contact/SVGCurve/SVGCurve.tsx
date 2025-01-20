@@ -23,7 +23,7 @@ export default function SVGCurve({
               startOffset={`${i * 40}%`}
               href="#curve"
             >
-              Dont't hesitate to contact me! •
+              Dont&apos;t hesitate to contact me! •
             </textPath>
           ))}
         </text>

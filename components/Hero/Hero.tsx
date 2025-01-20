@@ -63,7 +63,7 @@ export default function Hero() {
             transition={{ ease: "easeIn", delay: 2.2 }}
             className="text-2xl text-center w-96 sarcolenta-font tracking-wider capitalize"
           >
-            You've reached the right spot to develop your business idea to the
+            You&apos;ve reached the right spot to develop your business idea to the
             world wide
           </motion.p>
 

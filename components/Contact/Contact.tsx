@@ -19,7 +19,7 @@ export default function Contact() {
         }
       });
     });
-  }, []);
+  }, [scrollYProgress]);
 
   return (
     <div ref={container} id="contacts" className="h-full">

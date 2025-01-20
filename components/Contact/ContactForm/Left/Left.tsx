@@ -70,7 +70,7 @@ export default function Left() {
   return (
     <div className="w-1/2 flex flex-col justify-center items-start px-32 py-12">
       <h1 className="tracking-wide capitalize text-center text-6xl">
-        Let's chat about your dream & wild ideas
+        Let&apos;s chat about your dream & wild ideas
       </h1>
       <br />
       <br />
