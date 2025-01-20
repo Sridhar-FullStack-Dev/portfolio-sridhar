@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
-import { AnimatedTestimonials } from "../ui/animated-testimonials";
 
 export default function Testimonials() {
   const testimonialsTextRef = useRef<HTMLHeadingElement>(null);
