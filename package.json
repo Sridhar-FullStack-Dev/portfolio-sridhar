@@ -18,6 +18,7 @@
     "@react-three/drei": "^9.119.0",
     "@react-three/fiber": "^8.17.10",
     "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.9.59",
     "@tabler/icons-react": "^3.24.0",
     "@tsparticles/react": "^3.0.0",
     "TextureLoader": "link:three/src/loaders/TextureLoader",
