@@ -53,6 +53,10 @@ const menuItem: MenuItem[] = [
     name: "Projects",
   },
   {
+    href: "#testimonials",
+    name: "Testimonials",
+  },
+  {
     href: "#contacts",
     name: "Contacts",
   },

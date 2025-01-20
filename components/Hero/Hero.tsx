@@ -4,27 +4,28 @@ import { useEffect, useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import SplitType from "split-type";
 import { Vortex } from "../ui/vortex";
-import Image from "next/image";
 
 export default function Hero() {
   const [show, setShow] = useState<boolean>(false);
   const textRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
-    const text = new SplitType(textRef.current!, {
-      types: "chars",
-    });
+    if (textRef.current) {
+      const text = new SplitType(textRef.current, {
+        types: "chars",
+      });
 
-    gsap.from(text.chars, {
-      opacity: 0,
-      y: 100,
-      rotateX: -90,
-      stagger: 0.02,
-      duration: 1,
-      ease: "power4.out",
-      delay: 3,
-    });
-  }, []);
+      gsap.from(text.chars, {
+        opacity: 0,
+        y: 100,
+        rotateX: -90,
+        stagger: 0.02,
+        duration: 1,
+        ease: "power4.out",
+        delay: 3,
+      });
+    }
+  }, [show]);
 
   useEffect(() => {
     const showTimer = setTimeout(() => {
@@ -63,8 +64,8 @@ export default function Hero() {
             transition={{ ease: "easeIn", delay: 2.2 }}
             className="text-2xl text-center w-96 sarcolenta-font tracking-wider capitalize"
           >
-            You&apos;ve reached the right spot to develop your business idea to the
-            world wide
+            You&apos;ve reached the right spot to develop your business idea to
+            the world wide
           </motion.p>
 
           <motion.div

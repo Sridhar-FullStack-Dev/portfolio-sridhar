@@ -40,7 +40,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <div>
+    <div id="testimonials">
       <h1
         ref={testimonialsTextRef}
         className="milker-font text-8xl uppercase perspective-1000 text-alt-white"

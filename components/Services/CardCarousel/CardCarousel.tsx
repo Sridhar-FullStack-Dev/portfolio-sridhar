@@ -1,11 +1,17 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Image from "next/image";
 import { useEffect, useRef } from "react";
+import React from "react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import Image from "next/image";
+import { PiPhoneCallBold } from "react-icons/pi";
+import Link from "next/link";
+import { useLenis } from "lenis/react";
 
 export default function CardCarousel() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const lenis = useLenis();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -14,14 +20,15 @@ export default function CardCarousel() {
     if (!carousel) return;
 
     gsap.to(carousel, {
-      x: () => -(carousel.scrollWidth - window.innerWidth),
+      x: () => -(carousel.scrollWidth - window.innerWidth) * 1.5,
       ease: "none",
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top top+=128",
         pin: true,
-        scrub: 1,
-        end: () => `+=${carousel.scrollWidth - window.innerWidth + 100}`,
+        scrub: 3,
+        end: () =>
+          `+=${(carousel.scrollWidth - window.innerWidth) * 1.5 + 200}`,
         invalidateOnRefresh: true,
       },
     });
@@ -43,24 +50,33 @@ export default function CardCarousel() {
               return (
                 <div
                   key={cardsIndex}
-                  className="h-[45rem] w-[25rem] rounded-3xl overflow-hidden relative flex-shrink-0"
+                  className="h-[45rem] w-[25rem] bg-white text-black rounded-3xl border-4 overflow-hidden relative flex-shrink-0 p-5"
                 >
-                  <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-black/50 to-white/10" />
+                  <h1 className="text-6xl h-16 sarcolenta-font capitalize">
+                    {cards.heading}
+                  </h1>
 
-                  <Image
-                    src={cards.src}
-                    alt={cards.heading}
-                    height={1920}
-                    width={2880}
-                    priority={true}
-                    className="h-full w-full object-cover"
-                  />
+                  <DotLottieReact src={cards.src} loop autoplay />
 
-                  <div className="absolute top-10 left-10 z-10 text-white">
-                    <h1 className="text-6xl sarcolenta-font capitalize">
-                      {cards.heading}
-                    </h1>
-                  </div>
+                  {cardsIndex === 5 && (
+                    <Link
+                      href={"#contacts"}
+                      onClick={() => {
+                        lenis?.scrollTo("#contacts", { lerp: 0.02 });
+                      }}
+                      className="w-full flex justify-center items-center absolute bottom-3 left-0 z-30"
+                    >
+                      <div className="bg-alt-black text-white rounded-full text-lg p-2">
+                        <PiPhoneCallBold />
+                      </div>
+
+                      <p className="ml-2">
+                        For more enquiry feel free to{" "}
+                        <span className="underline font-medium">contact</span>{" "}
+                        me
+                      </p>
+                    </Link>
+                  )}
                 </div>
               );
             })}
@@ -79,43 +95,33 @@ interface CardCarouselData {
 
 const cardCarouselData: CardCarouselData[] = [
   {
-    src: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    heading: "Web designing",
+    src: "https://lottie.host/13d7c02a-8070-4fe1-ac44-617151c8ee72/TIn3RoTP6Q.lottie",
+    heading: "website designing",
     description: "",
   },
   {
-    src: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    heading: "Web Application development",
+    src: "https://lottie.host/31fbf91b-f14d-436a-a96b-f449267c093f/jITmGRvjEj.lottie",
+    heading: "E-commerce Solutions",
     description: "",
   },
   {
-    src: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    heading: "SEO",
+    src: "https://lottie.host/cafaa3ff-69e1-4dd9-b07f-16e1d66843d7/8N1Z6wzNkn.lottie",
+    heading: "Deployment and Hosting",
     description: "",
   },
   {
-    src: "https://img.freepik.com/free-vector/hand-drawn-illustrations-collection_1096-260.jpg?t=st=1734958081~exp=1734961681~hmac=d82b862c269e501c27c9bbc1baeea6be42a4900b11b12c6d0e50531fcddf06c8&w=740",
-    heading: "Digital Marketing",
+    src: "https://lottie.host/c25383ca-9288-4141-bd37-2d68e14b0282/pkma0hC5ov.lottie",
+    heading: "C.M.S Management",
     description: "",
   },
   {
-    src: "https://images.pexels.com/photos/2047914/pexels-photo-2047914.jpeg?auto=compress&cs=tinysrgb&w=600",
-    heading: "Content Creation",
+    src: "https://lottie.host/5cac3316-31a5-4213-9645-455edfe6fa75/FGUvnraSaJ.lottie",
+    heading: "Boost Traffic with SEO",
     description: "",
   },
   {
-    src: "https://images.pexels.com/photos/2047914/pexels-photo-2047914.jpeg?auto=compress&cs=tinysrgb&w=600",
-    heading: "Content Creation",
-    description: "",
-  },
-  {
-    src: "https://images.pexels.com/photos/2047914/pexels-photo-2047914.jpeg?auto=compress&cs=tinysrgb&w=600",
-    heading: "Content Creation",
-    description: "",
-  },
-  {
-    src: "https://images.pexels.com/photos/2047914/pexels-photo-2047914.jpeg?auto=compress&cs=tinysrgb&w=600",
-    heading: "Content Creation",
+    src: "https://lottie.host/63d2f59b-40b8-4240-a579-25d5c20eb253/Tg6ONBypmm.lottie",
+    heading: "And much more...",
     description: "",
   },
 ];
