@@ -2,11 +2,7 @@ import { motion } from "framer-motion";
 import { useLenis } from "lenis/react";
 import Link from "next/link";
 
-interface MenusProps {
-  isContactSection: boolean;
-}
-
-export default function Menus({ isContactSection }: MenusProps) {
+export default function Menus() {
   const lenis = useLenis();
   return (
     <div className="flex justify-center items-center gap-8 text-sm milker-font tracking-wider w-1/3">
@@ -18,11 +14,7 @@ export default function Menus({ isContactSection }: MenusProps) {
             }}
             href={menu.href}
           >
-            <span
-              className={`${isContactSection ? "text-alt-black" : "text-alt-white"}`}
-            >
-              {menu.name}
-            </span>
+            <span className="text-white">{menu.name}</span>
           </Link>
         </motion.div>
       ))}
