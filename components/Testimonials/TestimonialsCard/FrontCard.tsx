@@ -18,7 +18,10 @@ export default function FrontCard({
   dataIndex,
 }: FrontCardProps) {
   return (
-    <CardSpotlight className="h-96 w-auto text-alt-white rounded-3xl overflow-hidden p-4 relative backface-hidden">
+    <CardSpotlight
+      onClick={() => handleFlip(dataIndex)}
+      className="h-96 w-auto text-alt-white rounded-3xl overflow-hidden p-4 relative backface-hidden"
+    >
       <Image
         src={data.src}
         alt="logo"
@@ -62,8 +65,7 @@ export default function FrontCard({
       <AnimatePresence>
         {!flippedCards[dataIndex] && (
           <motion.div
-            onClick={() => handleFlip(dataIndex)}
-            className="absolute right-4 bottom-4 z-20 bg-white px-4 py-2 bg-opacity-5 backdrop-blur-sm cursor-pointer rounded-2xl"
+            className="absolute right-4 bottom-4 z-20 bg-white px-4 py-2 bg-opacity-5 backdrop-blur-sm rounded-2xl"
             initial={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.2 }}

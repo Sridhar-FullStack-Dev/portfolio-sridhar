@@ -23,7 +23,7 @@ export default function BackCard({
         <div className="relative h-full">
           <video
             autoPlay
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover filter brightness-110 contrast-125 saturate-150"
             src={data.testimonialVideo}
           >
             Your browser does not support the video tag.
