@@ -27,7 +27,7 @@ interface MenuItem {
   name: string;
 }
 
-const menuItem: MenuItem[] = [
+export const menuItem: MenuItem[] = [
   {
     href: "/",
     name: "Home",
