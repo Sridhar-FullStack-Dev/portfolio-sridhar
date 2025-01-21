@@ -198,5 +198,27 @@ body {
 }
 
 .backface-hidden {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+
+
+/* Custom Pagination Styles */
+.custom-pagination-bullet {
+  width: 6px !important;
+  height: 6px !important;
+  background: #ffffff !important;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.custom-pagination-bullet-active {
+  opacity: 1;
+  background: #ffffff !important;
+  transform: scale(1.2);
+}
+
+.swiper-pagination {
+  position: relative;
 }

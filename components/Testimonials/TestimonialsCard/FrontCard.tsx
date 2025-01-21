@@ -20,7 +20,7 @@ export default function FrontCard({
   return (
     <CardSpotlight
       onClick={() => handleFlip(dataIndex)}
-      className="h-96 w-auto text-alt-white rounded-3xl overflow-hidden p-4 relative backface-hidden"
+      className="absolute inset-0 h-96 w-full text-alt-white rounded-3xl overflow-hidden p-4 backface-hidden"
     >
       <Image
         src={data.src}
@@ -43,7 +43,7 @@ export default function FrontCard({
               initial={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              "{data.blockquote}"
+              &ldquo;{data.blockquote}&ldquo;
             </motion.p>
 
             <motion.footer

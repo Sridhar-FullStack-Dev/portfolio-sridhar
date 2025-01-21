@@ -3,6 +3,8 @@ import BackCard from "./BackCard";
 import FrontCard from "./FrontCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 export default function TestimonialsCard() {
   const [flippedCards, setFlippedCards] = useState<{ [key: number]: boolean }>(
@@ -18,30 +20,58 @@ export default function TestimonialsCard() {
     });
   };
 
-  return (
-    <div className="px-16 mt-8 ">
-      <Swiper slidesPerView={5} spaceBetween={10} className="mySwiper">
-        {testimonialCardDetails.map((data, dataIndex) => (
-          <SwiperSlide
-            key={dataIndex}
-            className={`relative transition-transform duration-700 preserve-3d ${
-              flippedCards[dataIndex] ? "rotate-y-180" : ""
-            }`}
-            style={{ transformStyle: "preserve-3d" }}
-          >
-            <FrontCard
-              data={data}
-              dataIndex={dataIndex}
-              flippedCards={flippedCards}
-              handleFlip={handleFlip}
-            />
+  const pagination = {
+    clickable: true,
+    renderBullet: function (_: unknown, className: string) {
+      return `<span class="${className} custom-pagination-bullet"></span>`;
+    },
+  };
 
-            <BackCard
-              data={data}
-              dataIndex={dataIndex}
-              handleFlip={handleFlip}
-              flippedCards={flippedCards}
-            />
+  return (
+    <div className="px-16 mt-8">
+      <Swiper
+        slidesPerView={5}
+        spaceBetween={10}
+        pagination={pagination}
+        breakpoints={{
+          320: { slidesPerView: 1, spaceBetween: 10 },
+          640: { slidesPerView: 2, spaceBetween: 10 },
+          768: { slidesPerView: 3, spaceBetween: 10 },
+          1024: { slidesPerView: 4, spaceBetween: 10 },
+          1280: { slidesPerView: 5, spaceBetween: 10 },
+        }}
+        modules={[Pagination]}
+        className="mySwiper h-[29rem]"
+      >
+        {testimonialCardDetails.map((data, dataIndex) => (
+          <SwiperSlide key={dataIndex}>
+            <div
+              className="relative w-full h-full"
+              style={{ perspective: "2000px" }}
+            >
+              <div
+                className={`relative transition-all duration-500 w-full h-full`}
+                style={{
+                  transformStyle: "preserve-3d",
+                  transform: flippedCards[dataIndex]
+                    ? "rotateY(180deg)"
+                    : "rotateY(0deg)",
+                }}
+              >
+                <FrontCard
+                  data={data}
+                  dataIndex={dataIndex}
+                  flippedCards={flippedCards}
+                  handleFlip={handleFlip}
+                />
+                <BackCard
+                  data={data}
+                  dataIndex={dataIndex}
+                  handleFlip={handleFlip}
+                  flippedCards={flippedCards}
+                />
+              </div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -65,46 +95,6 @@ const testimonialCardDetails: TestimonialCardDetails[] = [
     blockquote:
       "This service transformed my business! The team was incredibly helpful, and the results speak for themselves. Highly recommended!",
     testimonialVideo: "/Testimonials/video.mp4",
-  },
-  {
-    name: "John Doe",
-    position: "Founder & CEO, Portfolio",
-    src: "https://images.pexels.com/photos/30247059/pexels-photo-30247059/free-photo-of-close-up-portrait-of-a-domestic-tabby-cat.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    blockquote:
-      "This service transformed my business! The team was incredibly helpful, and the results speak for themselves. Highly recommended!",
-    testimonialVideo: "/Testimonials/video2.mp4",
-  },
-  {
-    name: "John Doe",
-    position: "Founder & CEO, Portfolio",
-    src: "https://images.pexels.com/photos/30247059/pexels-photo-30247059/free-photo-of-close-up-portrait-of-a-domestic-tabby-cat.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    blockquote:
-      "This service transformed my business! The team was incredibly helpful, and the results speak for themselves. Highly recommended!",
-    testimonialVideo: "/Testimonials/video2.mp4",
-  },
-  {
-    name: "John Doe",
-    position: "Founder & CEO, Portfolio",
-    src: "https://images.pexels.com/photos/30247059/pexels-photo-30247059/free-photo-of-close-up-portrait-of-a-domestic-tabby-cat.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    blockquote:
-      "This service transformed my business! The team was incredibly helpful, and the results speak for themselves. Highly recommended!",
-    testimonialVideo: "/Testimonials/video2.mp4",
-  },
-  {
-    name: "John Doe",
-    position: "Founder & CEO, Portfolio",
-    src: "https://images.pexels.com/photos/30247059/pexels-photo-30247059/free-photo-of-close-up-portrait-of-a-domestic-tabby-cat.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    blockquote:
-      "This service transformed my business! The team was incredibly helpful, and the results speak for themselves. Highly recommended!",
-    testimonialVideo: "/Testimonials/video2.mp4",
-  },
-  {
-    name: "John Doe",
-    position: "Founder & CEO, Portfolio",
-    src: "https://images.pexels.com/photos/30247059/pexels-photo-30247059/free-photo-of-close-up-portrait-of-a-domestic-tabby-cat.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    blockquote:
-      "This service transformed my business! The team was incredibly helpful, and the results speak for themselves. Highly recommended!",
-    testimonialVideo: "/Testimonials/video2.mp4",
   },
   {
     name: "John Doe",
