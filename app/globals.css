@@ -152,15 +152,15 @@ body {
   background: rgb(137, 60, 21);
   background: linear-gradient(
     90deg,
-    rgba(137, 60, 21, 1) 0%,
-    rgba(255, 222, 68, 1) 17%,
-    rgba(177, 116, 30, 1) 24%,
-    rgba(255, 231, 82, 1) 40%,
-    rgba(224, 147, 38, 1) 50%,
-    rgba(228, 150, 42, 1) 59%,
-    rgba(176, 120, 27, 1) 70%,
+    #893c15 0%,
+    #ffde44 17%,
+    #b1741e 24%,
+    #ffe752 40%,
+    #e09326 50%,
+    #e4962a 59%,
+    #b0781b 70%,
     rgba(239, 179, 51, 1) 85%,
-    rgba(135, 58, 26, 1) 100%
+    #873a1a 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -202,8 +202,6 @@ body {
   backface-visibility: hidden;
 }
 
-
-
 /* Custom Pagination Styles */
 .custom-pagination-bullet {
   width: 6px !important;
@@ -222,3 +220,26 @@ body {
 .swiper-pagination {
   position: relative;
 }
+
+/* Footer Background Webp */
+.footerBg-webp {
+  background-image: url("/Footer/bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.menu-item-container {
+  position: relative;
+  display: inline-block;
+}
+
+.text-original,
+.text-clone {
+  display: block;
+}
+
+.text-clone {
+  color: #FFF;
+}
+
