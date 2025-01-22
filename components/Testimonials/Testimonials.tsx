@@ -109,10 +109,10 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <div id="testimonials">
+    <div id="testimonials" className="mt-40">
       <h1
         ref={testimonialsTextRef}
-        className="milker-font tracking-wider text-sm uppercase perspective-1000 text-alt-white pl-16"
+        className="milker-font tracking-wider text-8xl uppercase perspective-1000 text-alt-white pl-16"
       >
         Testimonials
       </h1>

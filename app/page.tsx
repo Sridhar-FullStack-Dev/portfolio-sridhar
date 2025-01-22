@@ -6,6 +6,7 @@ import Doodle from "@/components/Doodle/Doodle";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
 import Intro from "@/components/Intro/Intro";
+import Projects from "@/components/Projects/Projects";
 import Services from "@/components/Services/Services";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import gsap from "gsap";
@@ -21,6 +22,7 @@ export default function Home() {
       {/* <Hero /> */}
       <About />
       <Services />
+      <Projects />
       <Testimonials />
       <Contact />
       <Doodle />
