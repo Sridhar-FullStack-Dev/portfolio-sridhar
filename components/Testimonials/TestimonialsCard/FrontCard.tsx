@@ -2,7 +2,7 @@ import { CardSpotlight } from "@/components/ui/card-spotlight";
 import { IoPlay } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { TestimonialCardDetails } from "./TestimonialsCard";
+import { TestimonialCardDetails } from "@/lib/const";
 
 interface FrontCardProps {
   data: TestimonialCardDetails;
