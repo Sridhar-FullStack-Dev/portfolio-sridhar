@@ -63,14 +63,20 @@ export const servicesItems: ServicesItem[] = [
 ];
 
 export const socials = [
-  { name: "Discord", href: "https://twitter.com/sneakerlab_offi" },
+  { name: "Discord", href: "https://discord.gg/ZxqW2y8Z" },
   {
     name: "Linkedin",
-    href: "https://www.instagram.com/sneaker_lab_official/",
+    href: "https://www.linkedin.com/in/e-sridhar-1720721a8/",
   },
-  { name: "Telegram", href: "https://discord.gg/sneakerlab" },
-  { name: "Whatsapp", href: "https://www.tiktok.com/@sneakerlabofficial" },
-  { name: "Instagram", href: "https://www.facebook.com/sneakerlab.official" },
+  { name: "Telegram", href: "https://t.me/Srioffcl" },
+  {
+    name: "Whatsapp",
+    href: "https://wa.me/919843849354?text=Hello!%20I%27m%20interested%20in%20your%20web%20development%20services.%20Could%20you%20please%20provide%20more%20details%3F",
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/sridhar._.official/?igsh=NnhpNTR5MnI4Nzg5#",
+  },
 ];
 
 interface CardCarouselData {

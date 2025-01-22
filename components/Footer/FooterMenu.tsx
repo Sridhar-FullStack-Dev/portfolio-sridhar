@@ -47,19 +47,23 @@ export default function FooterMenu() {
         >
           {socials.map((social, index) => (
             <li key={index}>
-              <Link href={social.href}>
+              <Link href={social.href} target="_blank">
                 <div
                   ref={(el) => setSocialRef(el, index)}
                   className="menu-item-container h-8 overflow-hidden cursor-pointer"
                 >
-                  <div className="text-original">{social.name}</div>
+                  <div className="text-original">
+                    <p>{social.name}</p>
+                  </div>
                   <div className="text-clone absolute top-full">
-                    {social.name}
+                    <p>
+                      {social.name}
+                    </p>
                   </div>
                 </div>
               </Link>
             </li>
-          ))}
+          ))}{" "}
         </ul>
       </div>
 
@@ -67,9 +71,8 @@ export default function FooterMenu() {
         <ul
           className={`text-xs uppercase ${inter.className} font-medium text-center space-y-2`}
         >
-          <li>based in</li>
-          <li>Thoothukudi</li>
-          <li>Tamilnadu, INDIA.</li>
+          <li>based in Thoothukudi</li>
+          <li>Tamilnadu - INDIA.</li>
         </ul>
       </div>
 
@@ -102,5 +105,3 @@ export default function FooterMenu() {
     </div>
   );
 }
-
-
