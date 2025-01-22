@@ -1,7 +1,6 @@
 import { FaHeart } from "react-icons/fa";
-import { TiTick } from "react-icons/ti";
 
-export default function FooterMenu() {
+export default function FooterCaptions() {
   return (
     <div className="absolute bottom-0 left-0 w-full">
       <div className="text-white py-3 px-12 flex justify-between items-center font-sans text-xs">

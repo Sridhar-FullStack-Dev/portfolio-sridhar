@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { TestimonialCardDetails } from "./TestimonialsCard";
 import { motion, AnimatePresence } from "framer-motion";
+import { TestimonialCardDetails } from "@/lib/const";
 
 interface BackCardProps {
   data: TestimonialCardDetails;

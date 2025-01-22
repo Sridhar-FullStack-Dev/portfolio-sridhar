@@ -1,3 +1,4 @@
+import { menuItem } from "@/lib/const";
 import { motion } from "framer-motion";
 import { useLenis } from "lenis/react";
 import Link from "next/link";
@@ -22,34 +23,4 @@ export default function Menus() {
   );
 }
 
-interface MenuItem {
-  href: string;
-  name: string;
-}
 
-export const menuItem: MenuItem[] = [
-  {
-    href: "/",
-    name: "Home",
-  },
-  {
-    href: "#about",
-    name: "About",
-  },
-  {
-    href: "#services",
-    name: "Services",
-  },
-  {
-    href: "#projects",
-    name: "Projects",
-  },
-  {
-    href: "#testimonials",
-    name: "Testimonials",
-  },
-  {
-    href: "#contacts",
-    name: "Contacts",
-  },
-];

@@ -1,12 +1,11 @@
+import { cardCarouselData } from "@/lib/const";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { useEffect, useRef } from "react";
-import React from "react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import Image from "next/image";
-import { PiPhoneCallBold } from "react-icons/pi";
-import Link from "next/link";
 import { useLenis } from "lenis/react";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
+import { PiPhoneCallBold } from "react-icons/pi";
 
 export default function CardCarousel() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -99,43 +98,4 @@ export default function CardCarousel() {
   );
 }
 
-interface CardCarouselData {
-  src: string;
-  heading: string;
-  description?: string;
-}
 
-const cardCarouselData: CardCarouselData[] = [
-  {
-    src: "https://lottie.host/13d7c02a-8070-4fe1-ac44-617151c8ee72/TIn3RoTP6Q.lottie",
-    heading: "website designing",
-    description:
-      "Creating sleek, modern websites that bring your vision to life.",
-  },
-  {
-    src: "https://lottie.host/31fbf91b-f14d-436a-a96b-f449267c093f/jITmGRvjEj.lottie",
-    heading: "E-commerce Solutions",
-    description:
-      "Powering your online store with seamless and scalable solutions.",
-  },
-  {
-    src: "https://lottie.host/cafaa3ff-69e1-4dd9-b07f-16e1d66843d7/8N1Z6wzNkn.lottie",
-    heading: "Deployment and Hosting",
-    description:
-      "Reliable deployment and hosting for smooth, worry-free operations.",
-  },
-  {
-    src: "https://lottie.host/c25383ca-9288-4141-bd37-2d68e14b0282/pkma0hC5ov.lottie",
-    heading: "C.M.S Management",
-    description:
-      "Effortless CMS management to keep your content fresh and engaging.",
-  },
-  {
-    src: "https://lottie.host/5cac3316-31a5-4213-9645-455edfe6fa75/FGUvnraSaJ.lottie",
-    heading: "Boost Traffic with SEO",
-  },
-  {
-    src: "https://lottie.host/63d2f59b-40b8-4240-a579-25d5c20eb253/Tg6ONBypmm.lottie",
-    heading: "And much more...",
-  },
-];

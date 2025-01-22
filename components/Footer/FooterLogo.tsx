@@ -1,3 +1,4 @@
+
 export default function FooterLogo() {
   return (
     <div className="flex justify-between items-center w-full text-[20rem] uppercase opacity-10 houseMontage-font font-medium">

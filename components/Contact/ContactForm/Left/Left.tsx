@@ -16,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { toast } from "sonner";
+import { servicesItems } from "@/lib/const";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -37,7 +38,7 @@ export default function Left() {
     defaultValues: {
       name: "",
       email: "",
-      hcwh: "", 
+      hcwh: "",
       services: [],
     },
   });
@@ -191,16 +192,3 @@ export default function Left() {
     </div>
   );
 }
-
-interface ServicesItem {
-  id: string;
-  label: string;
-}
-
-const servicesItems: ServicesItem[] = [
-  { id: "website", label: "Website Development" },
-  { id: "mobile", label: "Mobile App Development" },
-  { id: "design", label: "UI/UX Design" },
-  { id: "consulting", label: "Technical Consulting" },
-  { id: "other", label: "Other services" },
-];

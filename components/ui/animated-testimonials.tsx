@@ -57,13 +57,13 @@ export const AnimatedTestimonials = ({
                     opacity: 0,
                     scale: 0.9,
                     z: -100,
-                    rotate: randomRotations[index], // Use pre-generated rotation
+                    rotate: randomRotations[index],
                   }}
                   animate={{
                     opacity: isActive(index) ? 1 : 0.7,
                     scale: isActive(index) ? 1 : 0.95,
                     z: isActive(index) ? 0 : -100,
-                    rotate: isActive(index) ? 0 : randomRotations[index], // Use pre-generated rotation
+                    rotate: isActive(index) ? 0 : randomRotations[index],
                     zIndex: isActive(index)
                       ? 999
                       : testimonials.length + 2 - index,
@@ -73,7 +73,7 @@ export const AnimatedTestimonials = ({
                     opacity: 0,
                     scale: 0.9,
                     z: 100,
-                    rotate: randomRotations[index], // Use pre-generated rotation
+                    rotate: randomRotations[index],
                   }}
                   transition={{
                     duration: 0.4,
