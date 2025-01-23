@@ -33,6 +33,7 @@ export default function TestimonialsCard() {
       <Swiper
         slidesPerView={5}
         spaceBetween={10}
+        loop={true}
         pagination={pagination}
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 10 },

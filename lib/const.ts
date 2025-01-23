@@ -138,12 +138,52 @@ export const testimonialCardDetails: TestimonialCardDetails[] = [
     testimonialVideo: "/Testimonials/video.mp4",
   },
   {
-    name: "John Doe",
-    position: "Founder & CEO, Portfolio",
-    src: "https://images.pexels.com/photos/30247059/pexels-photo-30247059/free-photo-of-close-up-portrait-of-a-domestic-tabby-cat.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    name: "Sarah Thompson",
+    position: "Marketing Director, TechInnovate",
+    src: "https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     blockquote:
-      "This service transformed my business! The team was incredibly helpful, and the results speak for themselves. Highly recommended!",
-    testimonialVideo: "/Testimonials/video2.mp4",
+      "A game-changing solution that exceeded our expectations. Their strategic approach delivered remarkable results and transformed our marketing strategy.",
+    testimonialVideo: "/Testimonials/sarah-video.mp4",
+  },
+  {
+    name: "Michael Rodriguez",
+    position: "Founder & CEO, GreenSpark Solutions",
+    src: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    blockquote:
+      "Absolutely phenomenal service! Their innovative approach and attention to detail helped us scale our startup more efficiently than we ever imagined.",
+    testimonialVideo: "/Testimonials/michael-video.mp4",
+  },
+  {
+    name: "Emily Chen",
+    position: "Chief Operations Officer, DataDrive",
+    src: "https://images.pexels.com/photos/3775534/pexels-photo-3775534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    blockquote:
+      "Incredibly professional and results-oriented. Their expertise has been instrumental in optimizing our operational processes and driving business growth.",
+    testimonialVideo: "/Testimonials/emily-video.mp4",
+  },
+  {
+    name: "David Kim",
+    position: "Head of Product, InnovateTech",
+    src: "https://images.pexels.com/photos/2380794/pexels-photo-2380794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    blockquote:
+      "A truly transformative partnership. Their insights and strategic guidance have been crucial in reshaping our product development approach.",
+    testimonialVideo: "/Testimonials/david-video.mp4",
+  },
+  {
+    name: "Rachel Green",
+    position: "Lead Designer, CreativeSphere",
+    src: "https://images.pexels.com/photos/3756616/pexels-photo-3756616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    blockquote:
+      "Their creative solutions and deep understanding of our brand have been extraordinary. They've elevated our design strategy to new heights.",
+    testimonialVideo: "/Testimonials/rachel-video.mp4",
+  },
+  {
+    name: "Alex Nguyen",
+    position: "CTO, CloudTech Solutions",
+    src: "https://images.pexels.com/photos/2092474/pexels-photo-2092474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    blockquote:
+      "Cutting-edge technology meets exceptional service. They've been a critical partner in our digital transformation journey.",
+    testimonialVideo: "/Testimonials/alex-video.mp4",
   },
 ];
 
@@ -157,15 +197,14 @@ interface Project {
 export const projects: Project[] = [
   {
     title: "maria cars",
-    color: "#ADD8E6",
+    color: "#FFD1DC",
     link: "https://www.maria-cars.com/",
   },
-  { title: "Powder Blue", color: "#B0E0E6" },
-  { title: "Sky Blue", color: "#87CEEB" },
-  { title: "Light Steel Blue", color: "#B0C4DE" },
-  { title: "Mint Cream", color: "#F5FFFA" },
-  { title: "Lavender", color: "#E6E6FA" },
-  { title: "Beige", color: "#F5F5DC" },
-  { title: "Light Green", color: "#90EE90" },
-  { title: "Honeydew", color: "#F0FFF0" },
+  { title: "Light Green", color: "#C1FFC1" },
+  { title: "Sky Blue", color: "#B0E2FF" },
+  { title: "Light Lavender", color: "#E6E0F8" },
+  { title: "Light Yellow", color: "#FFFFC0" },
+  { title: "Light Orange", color: "#FFE4B5" },
+  { title: "Soft Salmon", color: "#FFA07A" },
+  { title: "Misty Rose", color: "#FFE4E1" },
 ];

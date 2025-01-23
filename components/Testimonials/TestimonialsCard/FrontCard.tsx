@@ -39,7 +39,7 @@ export default function FrontCard({
             transition={{ duration: 0.3 }}
           >
             <motion.p
-              className="text-lg"
+              className="text-lg h-40"
               initial={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
