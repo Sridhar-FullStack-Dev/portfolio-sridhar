@@ -146,3 +146,26 @@ export const testimonialCardDetails: TestimonialCardDetails[] = [
     testimonialVideo: "/Testimonials/video2.mp4",
   },
 ];
+
+// Projects
+interface Project {
+  title: string;
+  color: string;
+  link?: string;
+}
+
+export const projects: Project[] = [
+  {
+    title: "maria cars",
+    color: "#ADD8E6",
+    link: "https://www.maria-cars.com/",
+  },
+  { title: "Powder Blue", color: "#B0E0E6" },
+  { title: "Sky Blue", color: "#87CEEB" },
+  { title: "Light Steel Blue", color: "#B0C4DE" },
+  { title: "Mint Cream", color: "#F5FFFA" },
+  { title: "Lavender", color: "#E6E6FA" },
+  { title: "Beige", color: "#F5F5DC" },
+  { title: "Light Green", color: "#90EE90" },
+  { title: "Honeydew", color: "#F0FFF0" },
+];

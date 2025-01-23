@@ -242,3 +242,10 @@ body {
 .text-clone {
   color: #7d3ae9;
 }
+
+/* Animate Spin */
+.transform-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
