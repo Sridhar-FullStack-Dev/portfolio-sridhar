@@ -45,12 +45,14 @@ export function Skills() {
 
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-alt-black mt-20 mb-52">
-      <h1
-        ref={skillsTextRef}
-        className="milker-font text-8xl uppercase perspective-1000 text-alt-white"
-      >
-        Skills
-      </h1>
+      <div className="flex justify-start items-center w-full pl-16">
+        <h1
+          ref={skillsTextRef}
+          className="milker-font text-left text-8xl uppercase perspective-1000 text-alt-white"
+        >
+          Skills
+        </h1>
+      </div>
       <Marquee className="[--duration:50s] mt-8 relative z-20">
         {Array.from({ length: 3 }).map((_, index) => (
           <SkillCardOne key={index} />

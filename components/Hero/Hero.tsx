@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import SplitType from "split-type";
 import { Vortex } from "../ui/vortex";
+import { poppins } from "@/fonts";
 
 export default function Hero() {
   const [show, setShow] = useState<boolean>(false);
@@ -62,7 +63,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ ease: "easeIn", delay: 2.2 }}
-            className="text-2xl text-center w-96 sarcolenta-font tracking-wider capitalize"
+            className={`text-2xl text-center w-96 leading-10 ${poppins.className}`}
           >
             You&apos;ve reached the right spot to develop your business idea to
             the world wide
