@@ -70,8 +70,13 @@ export default {
         shine: "shine var(--duration) infinite linear",
         marquee: "marquee var(--duration) infinite linear",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        grid: "grid 15s linear infinite",
       },
       keyframes: {
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
         gradient: {
           to: {
             backgroundPosition: "var(--bg-size) 0",

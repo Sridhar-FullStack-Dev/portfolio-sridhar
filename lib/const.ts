@@ -200,7 +200,7 @@ export const projects: Project[] = [
     color: "#FFD1DC",
     link: "https://www.maria-cars.com/",
   },
-  { title: "Light Green", color: "#C1FFC1" },
+  { title: "p8.io", color: "#C1FFC1" },
   { title: "Sky Blue", color: "#B0E2FF" },
   { title: "Light Lavender", color: "#E6E0F8" },
   { title: "Light Yellow", color: "#FFFFC0" },

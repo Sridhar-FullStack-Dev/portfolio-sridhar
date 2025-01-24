@@ -8,6 +8,7 @@ import Hero from "@/components/Hero/Hero";
 import Intro from "@/components/Intro/Intro";
 import Projects from "@/components/Projects/Projects";
 import Services from "@/components/Services/Services";
+import { Skills } from "@/components/Skills/Skills";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -19,9 +20,10 @@ export default function Home() {
     <main>
       <Cursor />
       <Intro />
-      {/* <Hero /> */}
+      <Hero />
       <About />
       <Services />
+      <Skills />
       <Projects />
       <Testimonials />
       <Contact />
