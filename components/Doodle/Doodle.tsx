@@ -78,11 +78,11 @@ export default function Doodle() {
             className="sm:h-20 md:h-32 w-[50rem] rounded-full object-cover"
           />
         </div>
-        <p className="pl-4">Comes</p>
+        <p className="pl-4">Come</p>
       </div>
 
       <div className="my-text2">
-        <p className="py-8 text-right pl-4">Opportunity</p>
+        <p className="py-8 text-right pl-4">Opportunities</p>
       </div>
     </div>
   );
