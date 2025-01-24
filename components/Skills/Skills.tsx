@@ -1,10 +1,6 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
-import Marquee from "../ui/marquee";
-import { RetroGrid } from "../ui/retro-grid";
-import { SkillCardOne } from "./SkillsCard/SkillsCardOne";
-import { SkillCardTwo } from "./SkillsCard/SkillsCardTwo";
 
 export function Skills() {
   const skillsTextRef = useRef<HTMLHeadingElement>(null);

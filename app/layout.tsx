@@ -1,9 +1,6 @@
-import Audio from "@/components/Audio/Audio";
 import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
-import Navbar from "@/components/Navbar/Navbar";
 import type { Metadata } from "next";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sridhar-portfolio.com"),
@@ -66,16 +63,8 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body
-        suppressHydrationWarning
-        className="bg-alt-black text-white selection:bg-white selection:text-black cursor-none antialiased"
-      >
-        <SmoothScroll>
-          <Navbar />
-          {children}
-          <Toaster />
-          <Audio />
-        </SmoothScroll>
+      <body suppressHydrationWarning>
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
