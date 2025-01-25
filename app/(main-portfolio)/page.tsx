@@ -31,8 +31,8 @@ export default function Home() {
       <Skills />
       <Projects />
       <Testimonials />
-      <Contact />
       <Doodle />
+      <Contact />
       <Footer />
     </main>
   );

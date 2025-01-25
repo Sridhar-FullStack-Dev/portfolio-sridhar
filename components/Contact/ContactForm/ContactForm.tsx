@@ -1,11 +1,19 @@
 import Link from "next/link";
-import Left from "./Left/Left";
-import Right from "./Right/Right";
 import { PiPhoneCallBold } from "react-icons/pi";
+import Left from "./Left/Left";
+import { IoMenuOutline } from "react-icons/io5";
+import { useLenis } from "lenis/react";
+import Right from "./Right/Right";
 
 export default function ContactForm() {
+  const lenis = useLenis();
+  const element = document.getElementById("formContent");
+
   return (
-    <div className="houseMontage-font bg-alt-white text-black h-screen relative">
+    <div
+      id="formContent"
+      className="houseMontage-font bg-alt-white text-black h-screen relative"
+    >
       <div className="flex justify-between items-center h-full">
         <Left />
         <Right />
@@ -29,6 +37,18 @@ export default function ContactForm() {
           <span className="text-sm text-red-600">*</span> Link not working? call{" "}
           <span className="underline font-bold">+919843849354</span>
         </div>
+      </div>
+
+      <div
+        onClick={() => {
+          if (element) {
+            const targetPosition = element.offsetTop - 50;
+            lenis?.scrollTo(targetPosition, { lerp: 0.02 });
+          }
+        }}
+        className="text-black absolute bottom-5 left-1/2 cursor-pointer "
+      >
+        <IoMenuOutline className="text-xl text-gray-400" />
       </div>
     </div>
   );

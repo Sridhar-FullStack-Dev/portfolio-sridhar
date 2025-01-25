@@ -14,9 +14,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { servicesItems } from "@/lib/const";
 import { useState } from "react";
 import { toast } from "sonner";
-import { servicesItems } from "@/lib/const";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -70,7 +70,7 @@ export default function Left() {
 
   return (
     <div className="w-1/2 flex flex-col justify-center items-start px-32 py-12">
-      <h1 className="tracking-wide capitalize text-center text-6xl">
+      <h1 className="tracking-wide capitalize text-6xl">
         Let&apos;s chat about your dream & wild ideas
       </h1>
       <br />

@@ -46,7 +46,7 @@ export default function Intro() {
       clearInterval(counterInterval);
       clearInterval(loaderTimer);
     };
-  }, []);
+  }, [show]);
 
   if (!show) return null;
 

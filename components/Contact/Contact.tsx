@@ -22,8 +22,11 @@ export default function Contact() {
   }, [scrollYProgress]);
 
   return (
-    <div ref={container} id="contacts" className="h-full">
-      <SVGCurve paths={paths} />
+    <div>
+      <div id="contacts" className="h-full" ref={container}>
+        <SVGCurve paths={paths} />
+      </div>
+
       <ContactForm />
     </div>
   );
