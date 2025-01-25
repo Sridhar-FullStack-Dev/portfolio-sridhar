@@ -12,19 +12,20 @@ import { Skills } from "@/components/Skills/Skills";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MouseEvent } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   return (
     <main
-      onContextMenu={(e: React.MouseEvent) => {
+      onContextMenu={(e: MouseEvent) => {
         e.preventDefault();
       }}
     >
       <Cursor />
       <Intro />
-      <Hero />
+      {/* <Hero /> */}
       <About />
       <Services />
       <Skills />

@@ -2,6 +2,9 @@ import { IoMdArrowBack } from "react-icons/io";
 import WoodBird from "./WoodBird";
 import { useRouter } from "next/navigation";
 import MinimalGoods from "./MinimalGoods";
+import Minibricks from "./Minibricks";
+import Framer from "./Framer";
+import CinemaPoint from "./CinemaPoint";
 
 interface Props {
   title: string | string[] | undefined;
@@ -9,7 +12,7 @@ interface Props {
 
 export default function ShowCase({ title }: Props) {
   const router = useRouter();
-  const titles = decodeURIComponent(title as string);
+  const titles = decodeURIComponent(title as string) as keyof typeof components;
 
   return (
     <div
@@ -18,8 +21,7 @@ export default function ShowCase({ title }: Props) {
       }}
       className="h-screen w-screen flex justify-center items-center bg-black overflow-hidden relative"
     >
-      {titles === "Wood Bird" && <WoodBird />}
-      {titles === "Minimal Goods" && <MinimalGoods />}
+      {components[titles]}
 
       <div
         onClick={() => router.back()}
@@ -30,3 +32,11 @@ export default function ShowCase({ title }: Props) {
     </div>
   );
 }
+const components = {
+  "Wood Bird": <WoodBird />,
+  "Minimal Goods": <MinimalGoods />,
+  "Mini Bricks": <Minibricks />,
+  "Hold Work": <Minibricks />,
+  Framer: <Framer />,
+  "Cinema Point": <CinemaPoint />,
+};

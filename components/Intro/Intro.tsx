@@ -4,12 +4,19 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Intro() {
-  const [show, setShow] = useState<boolean>(true);
+  const [show, setShow] = useState<boolean>(() => {
+    if (typeof window !== "undefined") {
+      return !localStorage.getItem("introShown");
+    }
+    return true;
+  });
   const [text, setText] = useState<string>("sridhar");
   const [textWhiteLoader, setTextWhiteLoader] = useState<boolean>(false);
   const [count, setCount] = useState<number>(0);
 
   useEffect(() => {
+    if (!show) return;
+
     const textTimer = setTimeout(() => {
       setText("portfolio");
     }, 1600);
@@ -20,6 +27,7 @@ export default function Intro() {
 
     const showTimer = setTimeout(() => {
       setShow(false);
+      localStorage.setItem("introShown", "true");
     }, 3000);
 
     const counterInterval = setInterval(() => {
@@ -39,6 +47,8 @@ export default function Intro() {
       clearInterval(loaderTimer);
     };
   }, []);
+
+  if (!show) return null;
 
   return (
     <AnimatePresence>

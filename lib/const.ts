@@ -203,8 +203,8 @@ export const projects: Project[] = [
   { title: "p8.io", color: "#C1FFC1" },
   { title: "Wood Bird", color: "#B0E2FF" },
   { title: "Minimal Goods", color: "#E6E0F8" },
-  { title: "Light Yellow", color: "#FFFFC0" },
-  { title: "Light Orange", color: "#FFE4B5" },
-  { title: "Soft Salmon", color: "#FFA07A" },
-  { title: "Misty Rose", color: "#FFE4E1" },
+  { title: "Mini Bricks", color: "#FFFFC0" },
+  { title: "Hold Work", color: "#FFE4B5" },
+  { title: "Framer", color: "#FFA07A" },
+  { title: "Cinema Point", color: "#FFE4E1" },
 ];
