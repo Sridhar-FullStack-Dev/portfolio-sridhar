@@ -5,6 +5,8 @@ import MinimalGoods from "./MinimalGoods";
 import Minibricks from "./Minibricks";
 import Framer from "./Framer";
 import CinemaPoint from "./CinemaPoint";
+import MariaCars from "./MariaCars";
+import P8IO from "./P8IO";
 
 interface Props {
   title: string | string[] | undefined;
@@ -14,6 +16,12 @@ export default function ShowCase({ title }: Props) {
   const router = useRouter();
   const titles = decodeURIComponent(title as string) as keyof typeof components;
 
+  if (!titles) return null;
+
+  if(titles === "Maria Cars") {
+    router.push("/projects/wood-bird");
+    return null;
+  }
   return (
     <div
       onContextMenu={(e: React.MouseEvent) => {
@@ -32,7 +40,10 @@ export default function ShowCase({ title }: Props) {
     </div>
   );
 }
+
 const components = {
+  "Maria Cars": <MariaCars />,
+  "p8.io": <P8IO />,
   "Wood Bird": <WoodBird />,
   "Minimal Goods": <MinimalGoods />,
   "Mini Bricks": <Minibricks />,

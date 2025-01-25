@@ -25,7 +25,7 @@ export default function Home() {
     >
       <Cursor />
       <Intro />
-      {/* <Hero /> */}
+      <Hero />
       <About />
       <Services />
       <Skills />
