@@ -1,3 +1,13 @@
+import AWSSVG from "@/components/Skills/SVGs/AWS";
+import FirebaseSVG from "@/components/Skills/SVGs/Firebase";
+import GithubSVG from "@/components/Skills/SVGs/Github";
+import MongodbSVG from "@/components/Skills/SVGs/MongoDB";
+import NextjsSVG from "@/components/Skills/SVGs/NextJS";
+import NodeJsSVG from "@/components/Skills/SVGs/NodeJS";
+import ReactjsSVG from "@/components/Skills/SVGs/ReactJS";
+import TailwindSvg from "@/components/Skills/SVGs/TailwindCSS";
+import TypescriptSVG from "@/components/Skills/SVGs/Typescript";
+
 interface MenuItem {
   href: string;
   name: string;
@@ -207,4 +217,30 @@ export const projects: Project[] = [
   { title: "Hold Work", color: "#FFE4B5" },
   { title: "Framer", color: "#FFA07A" },
   { title: "Cinema Point", color: "#FFE4E1" },
+];
+
+interface Skills {
+  skill: string;
+  level: number | string;
+  svgElement: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+}
+
+export const skills: Skills[] = [
+  { skill: "Nextjs", level: 95, svgElement: NextjsSVG },
+  { skill: "Firebase", level: 64, svgElement: FirebaseSVG },
+  {
+    skill: "Typescript",
+    level: 80,
+    svgElement: TypescriptSVG,
+  },
+  { skill: "Reactjs", level: 70, svgElement: ReactjsSVG },
+  {
+    skill: "Tailwind css",
+    level: 80,
+    svgElement: TailwindSvg,
+  },
+  { skill: "Nodejs", level: 55, svgElement: NodeJsSVG },
+  { skill: "Mongo DB", level: 50, svgElement: MongodbSVG },
+  { skill: "Github", level: 95, svgElement: GithubSVG },
+  { skill: "AWS", level: 60, svgElement: AWSSVG },
 ];
