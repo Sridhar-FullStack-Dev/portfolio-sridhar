@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { servicesItems } from "@/lib/const";
 import { useState } from "react";
 import { toast } from "sonner";
+import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -31,7 +32,7 @@ const formSchema = z.object({
   }),
 });
 
-export default function Left() {
+export default function FormContent() {
   const [isContactLoading, setIsContactLoading] = useState<boolean>(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -69,8 +70,8 @@ export default function Left() {
   }
 
   return (
-    <div className="w-1/2 flex flex-col justify-center items-start px-32 py-12">
-      <h1 className="tracking-wide capitalize text-6xl">
+    <div className="w-full flex flex-col justify-center items-start px-32 py-12">
+      <h1 className="tracking-wide capitalize text-6xl w-full text-center mt-12">
         Let&apos;s chat about your dream & wild ideas
       </h1>
       <br />
@@ -81,43 +82,45 @@ export default function Left() {
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-8 font-sans w-full"
         >
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Name</FormLabel>
-                <FormControl>
-                  <Input
-                    placeholder="Your Name"
-                    {...field}
-                    className="bg-transparent !border-b border-black outline-none"
-                  />
-                </FormControl>
-                <FormDescription>Let me know your name.</FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          <div className="grid grid-cols-2 gap-8">
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Name</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Your Name"
+                      {...field}
+                      className="bg-transparent !border-b border-black outline-none"
+                    />
+                  </FormControl>
+                  <FormDescription>Let me know your name.</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Email</FormLabel>
-                <FormControl>
-                  <Input
-                    placeholder="Your Email"
-                    {...field}
-                    className="bg-transparent !border-b border-black outline-none"
-                  />
-                </FormControl>
-                <FormDescription>Email for reply back.</FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Your Email"
+                      {...field}
+                      className="bg-transparent !border-b border-black outline-none"
+                    />
+                  </FormControl>
+                  <FormDescription>Email for reply back.</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
 
           <FormField
             control={form.control}
@@ -126,10 +129,10 @@ export default function Left() {
               <FormItem>
                 <FormLabel>How can we help?</FormLabel>
                 <FormControl>
-                  <Input
+                  <Textarea
                     placeholder="Tell me more about your project"
                     {...field}
-                    className="bg-transparent !border-b border-black outline-none"
+                    className="bg-transparent !border-b border-black outline-none resize-none rounded-full placeholder:p-2"
                   />
                 </FormControl>
                 <FormDescription>For better understanding.</FormDescription>
@@ -184,7 +187,7 @@ export default function Left() {
             )}
           />
 
-          <Button type="submit" className="w-full">
+          <Button type="submit" className="w-full rounded-full">
             {isContactLoading ? "Sending..." : "Send"}
           </Button>
         </form>
