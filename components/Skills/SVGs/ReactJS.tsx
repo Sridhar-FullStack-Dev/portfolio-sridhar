@@ -2,11 +2,12 @@ const ReactjsSVG = (
   props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
 ) => (
   <svg
-    width="80px"
-    height="80px"
+    width="60px"
+    height="60px"
     viewBox="0 0 569 512"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
+    className="ml-2"
     {...props}
   >
     <title>{"React-Logo-Filled (1)"}</title>

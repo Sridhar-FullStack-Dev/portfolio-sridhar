@@ -3,7 +3,7 @@ const TypescriptSVG = (
 ) => (
   <svg
     fill="none"
-    height={50}
+    height={60}
     viewBox="0 0 27 26"
     width={100}
     xmlns="http://www.w3.org/2000/svg"

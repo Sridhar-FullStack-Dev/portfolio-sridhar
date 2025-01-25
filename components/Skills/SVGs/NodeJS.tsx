@@ -3,11 +3,11 @@ const NodeJsSVG = (
 ) => (
   <svg
     width={100}
-    height={80}
+    height={60}
     viewBox="0 0 267 80"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="fill-[#333333] dark:fill-white NodejsLogo_nodejsLogo__mBW__"
+    className="fill-white ml-2"
     {...props}
   >
     <mask

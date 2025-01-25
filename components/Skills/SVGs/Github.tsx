@@ -2,12 +2,13 @@ const GithubSVG = (
   props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
 ) => (
   <svg
-    width="80px"
-    height="80px"
+    width="60px"
+    height="60px"
     viewBox="0 0 20 20"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     {...props}
+    className="ml-2"
   >
     <title>{"github [#142]"}</title>
     <desc>{"Created with Sketch."}</desc>

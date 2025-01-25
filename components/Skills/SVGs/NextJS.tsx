@@ -6,6 +6,7 @@ const NextjsSVG = (
     viewBox="0 0 180 180"
     width={80}
     {...props}
+    className="ml-2"
   >
     <mask
       height={180}
