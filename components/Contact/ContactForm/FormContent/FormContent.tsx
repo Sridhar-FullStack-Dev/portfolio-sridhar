@@ -70,7 +70,7 @@ export default function FormContent() {
   }
 
   return (
-    <div className="w-full flex flex-col justify-center items-start px-32 py-12">
+    <div className="w-full flex flex-col justify-center items-start px-32 pt-12 pb-20">
       <h1 className="tracking-wide capitalize text-6xl w-full text-center mt-12">
         Let&apos;s chat about your dream & wild ideas
       </h1>
@@ -132,7 +132,7 @@ export default function FormContent() {
                   <Textarea
                     placeholder="Tell me more about your project"
                     {...field}
-                    className="bg-transparent !border-b border-black outline-none resize-none rounded-full placeholder:p-2"
+                    className="bg-transparent !border-b border-black outline-none resize-none rounded-full p-4"
                   />
                 </FormControl>
                 <FormDescription>For better understanding.</FormDescription>
@@ -145,10 +145,10 @@ export default function FormContent() {
             control={form.control}
             name="services"
             render={() => (
-              <FormItem className="flex items-center justify-between gap-2 text-xs">
-                {servicesItems.map((item) => (
+              <FormItem className="flex justify-between items-center gap-2 text-xs">
+                {servicesItems.map((item, itemIndex) => (
                   <FormField
-                    key={item.id}
+                    key={itemIndex}
                     control={form.control}
                     name="services"
                     render={({ field }) => {

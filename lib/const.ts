@@ -4,9 +4,12 @@ import GithubSVG from "@/components/Skills/SVGs/Github";
 import MongodbSVG from "@/components/Skills/SVGs/MongoDB";
 import NextjsSVG from "@/components/Skills/SVGs/NextJS";
 import NodeJsSVG from "@/components/Skills/SVGs/NodeJS";
+import PlaywrightSVG from "@/components/Skills/SVGs/Playwright";
+import PNPMSVG from "@/components/Skills/SVGs/PNPM";
 import ReactjsSVG from "@/components/Skills/SVGs/ReactJS";
 import TailwindSvg from "@/components/Skills/SVGs/TailwindCSS";
 import TypescriptSVG from "@/components/Skills/SVGs/Typescript";
+import VercelSVG from "@/components/Skills/SVGs/Vercel";
 
 interface MenuItem {
   href: string;
@@ -68,7 +71,10 @@ export const servicesItems: ServicesItem[] = [
   { id: "website", label: "Website Development" },
   { id: "mobile", label: "Mobile App Development" },
   { id: "design", label: "UI/UX Design" },
+  { id: "SEO", label: "SEO Optimization" },
   { id: "consulting", label: "Technical Consulting" },
+  { id: "branding", label: "Branding" },
+  { id: "courses Offered", label: "Courses Offered" },
   { id: "other", label: "Other services" },
 ];
 
@@ -226,21 +232,21 @@ interface Skills {
 }
 
 export const skills: Skills[] = [
+  // Frontend Skills
   { skill: "Nextjs", level: 95, svgElement: NextjsSVG },
-  { skill: "Firebase", level: 64, svgElement: FirebaseSVG },
-  {
-    skill: "Typescript",
-    level: 80,
-    svgElement: TypescriptSVG,
-  },
   { skill: "Reactjs", level: 70, svgElement: ReactjsSVG },
-  {
-    skill: "Tailwind css",
-    level: 80,
-    svgElement: TailwindSvg,
-  },
+  { skill: "Typescript", level: 80, svgElement: TypescriptSVG },
+  { skill: "Tailwind CSS", level: 80, svgElement: TailwindSvg },
+
+  // Backend & Database Skills
   { skill: "Nodejs", level: 55, svgElement: NodeJsSVG },
   { skill: "Mongo DB", level: 50, svgElement: MongodbSVG },
+  { skill: "Firebase", level: 64, svgElement: FirebaseSVG },
+
+  // Tools & Deployment
   { skill: "Github", level: 95, svgElement: GithubSVG },
+  { skill: "Vercel", level: 80, svgElement: VercelSVG },
   { skill: "AWS", level: 60, svgElement: AWSSVG },
+  { skill: "PNPM", level: 80, svgElement: PNPMSVG },
+  { skill: "Playwright", level: 70, svgElement: PlaywrightSVG },
 ];
