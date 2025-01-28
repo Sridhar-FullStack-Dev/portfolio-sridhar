@@ -27,7 +27,6 @@ export default function Navbar() {
 
       <div className="w-1/3 flex justify-end items-center gap-4">
         <Pricing />
-        <Menus />
       </div>
     </motion.div>
   );

@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import "../globals.css";
+import Menus from "@/components/Navbar/Menus/Menus";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sridhar-portfolio.com"),
@@ -66,6 +67,7 @@ export default function PortfolioLayout({
   return (
     <main className="bg-alt-black text-white selection:bg-white selection:text-black cursor-none antialiased">
       <Navbar />
+      <Menus />
       {children}
       <Toaster />
       <Audio />

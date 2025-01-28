@@ -27,31 +27,31 @@ export const menuItem: MenuItem[] = [
   {
     title: "About",
     href: "#about",
-    description: "To See Everything",
+    description: "About Me",
     images: ["projects1.jpg", "projects2.jpg"],
   },
   {
     title: "Services",
     href: "#services",
-    description: "To Learn Everything",
+    description: "Services Offered",
     images: ["agence1.jpg", "agence2.jpg"],
   },
   {
     title: "Projects",
     href: "#projects",
-    description: "To Send a FAX",
+    description: "Projects I've Worked On",
     images: ["contact1.jpg", "contact2.jpg"],
   },
   {
     title: "Testimonials",
     href: "#testimonials",
-    description: "To Send a FAX",
+    description: "What People Say About Me",
     images: ["contact1.jpg", "contact2.jpg"],
   },
   {
     title: "Contacts",
     href: "#contacts",
-    description: "To Send a FAX",
+    description: "Get in Touch",
     images: ["contact1.jpg", "contact2.jpg"],
   },
 ];

@@ -1,9 +1,8 @@
+import { menuItem } from "@/lib/const";
 import { motion } from "framer-motion";
 import { mountAnim, opacity, slideLeft } from "../anim";
 import Link from "./link";
 import styles from "./style.module.scss";
-import { menuItem } from "@/lib/const";
-import { IoMdClose } from "react-icons/io";
 
 export default function Menu({ closeMenu }: { closeMenu: () => void }) {
   return (
@@ -39,18 +38,6 @@ export default function Menu({ closeMenu }: { closeMenu: () => void }) {
           );
         })}
       </div>
-
-      <motion.div
-        variants={opacity}
-        {...mountAnim}
-        custom={0.5}
-        className={styles.footer}
-      >
-        <a>FB</a>
-        <a>IG</a>
-        <a>IN</a>
-        <a>BE</a>
-      </motion.div>
     </motion.div>
   );
 }
