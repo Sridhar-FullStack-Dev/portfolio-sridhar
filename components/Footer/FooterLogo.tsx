@@ -1,7 +1,7 @@
 
 export default function FooterLogo() {
   return (
-    <div className="flex justify-between items-center w-full text-[20rem] uppercase opacity-10 houseMontage-font font-medium">
+    <div className="flex justify-between items-center w-full text-[20rem] uppercase opacity-10 houseMontage-font font-medium overflow-hidden">
       <h1>S</h1>
       <h1>r</h1>
       <h1>i</h1>
