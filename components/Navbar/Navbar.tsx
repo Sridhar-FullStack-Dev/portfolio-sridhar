@@ -1,9 +1,9 @@
 "use client";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useState } from "react";
 import Logo from "./Logo/Logo";
 import Menus from "./Menus/Menus";
-import More from "./More/More";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import { useState } from "react";
+import Pricing from "./Pricing/Pricing";
 
 export default function Navbar() {
   const { scrollY } = useScroll();
@@ -24,8 +24,11 @@ export default function Navbar() {
       transition={{ duration: 0.3 }}
     >
       <Logo />
-      <Menus />
-      <More />
+
+      <div className="w-1/3 flex justify-end items-center gap-4">
+        <Pricing />
+        <Menus />
+      </div>
     </motion.div>
   );
 }
