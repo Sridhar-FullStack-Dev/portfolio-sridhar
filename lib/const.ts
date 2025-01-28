@@ -11,35 +11,52 @@ import TailwindSvg from "@/components/Skills/SVGs/TailwindCSS";
 import TypescriptSVG from "@/components/Skills/SVGs/Typescript";
 import VercelSVG from "@/components/Skills/SVGs/Vercel";
 
-interface MenuItem {
+interface FooterMenuItem {
   href: string;
   name: string;
 }
 
+export interface MenuItem {
+  title: string;
+  href: string;
+  description: string;
+  images: string[];
+}
+
 export const menuItem: MenuItem[] = [
   {
+    title: "About",
     href: "#about",
-    name: "About",
+    description: "To See Everything",
+    images: ["projects1.jpg", "projects2.jpg"],
   },
   {
+    title: "Services",
     href: "#services",
-    name: "Services",
+    description: "To Learn Everything",
+    images: ["agence1.jpg", "agence2.jpg"],
   },
   {
+    title: "Projects",
     href: "#projects",
-    name: "Projects",
+    description: "To Send a FAX",
+    images: ["contact1.jpg", "contact2.jpg"],
   },
   {
+    title: "Testimonials",
     href: "#testimonials",
-    name: "Testimonials",
+    description: "To Send a FAX",
+    images: ["contact1.jpg", "contact2.jpg"],
   },
   {
+    title: "Contacts",
     href: "#contacts",
-    name: "Contacts",
+    description: "To Send a FAX",
+    images: ["contact1.jpg", "contact2.jpg"],
   },
 ];
 
-export const footerMenuItem: MenuItem[] = [
+export const footerMenuItem: FooterMenuItem[] = [
   {
     href: "#about",
     name: "About",
