@@ -9,7 +9,6 @@ export default function ({ openMenu }: { openMenu: () => void }) {
       }}
       className={styles.button}
     >
-      <div className={styles.background}></div>
       <VscMenu />
     </div>
   );

@@ -1,14 +1,11 @@
 .button {
-  width: fit-content;
-  height: fit-content;
   background-color: #0c0c0c;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   position: fixed;
-  right: 0;
-  top: 0;
-  padding: 10px;
+  right: -10px;
+  top: -8px;
   cursor: pointer;
 
   p {
@@ -29,16 +26,6 @@
     }
   }
 
-  .background {
-    background-color: #d3fd50;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    height: 0;
-    transition: height 0.3s;
-  }
 
   &:hover {
     p {
@@ -48,9 +35,6 @@
       line {
         stroke: #0c0c0c;
       }
-    }
-    .background {
-      height: 100%;
     }
   }
 }
