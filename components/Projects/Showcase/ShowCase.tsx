@@ -15,13 +15,6 @@ interface Props {
 export default function ShowCase({ title }: Props) {
   const router = useRouter();
   const titles = decodeURIComponent(title as string) as keyof typeof components;
-
-  if (!titles) return null;
-
-  if(titles === "Maria Cars") {
-    router.push("/projects/wood-bird");
-    return null;
-  }
   return (
     <div
       onContextMenu={(e: React.MouseEvent) => {
@@ -42,7 +35,7 @@ export default function ShowCase({ title }: Props) {
 }
 
 const components = {
-  "Maria Cars": <MariaCars />,
+  "maria cars": <MariaCars />,
   "p8.io": <P8IO />,
   "Wood Bird": <WoodBird />,
   "Minimal Goods": <MinimalGoods />,

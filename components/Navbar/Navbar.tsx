@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <motion.div
-      className="fixed top-0 w-full flex justify-between items-center px-10 py-1.5 border-b-2 border-alt-white bg-transparent backdrop-blur-sm overflow-hidden z-[99]"
+      className="fixed top-0 w-full flex justify-between items-center sm:px-4 laptop:px-10 sm:py-2 laptop:py-1.5 border-b-2 border-alt-white bg-transparent backdrop-blur-sm z-[99]"
       animate={{ y: hidden ? -100 : 0 }}
       transition={{ duration: 0.3 }}
     >

@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 export default function MariaCars() {
   const redirectUrl = "https://www.maria-cars.com/";
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.open(redirectUrl, "_blank");
   }, []);
   return <div>Loading...</div>;
