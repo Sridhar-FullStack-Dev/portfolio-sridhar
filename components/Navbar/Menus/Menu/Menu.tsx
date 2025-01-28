@@ -1,5 +1,6 @@
 import { menuItem } from "@/lib/const";
 import { motion } from "framer-motion";
+import NextLink from "next/link";
 import { mountAnim, opacity, slideLeft } from "../anim";
 import Link from "./link";
 import styles from "./style.module.scss";
@@ -14,6 +15,12 @@ export default function Menu({ closeMenu }: { closeMenu: () => void }) {
       exit="exit"
     >
       <div className={styles.header}>
+        <NextLink
+          href={"tel:+919843849354"}
+          className="font-sans text-lg font-medium italic text-alt-black hover:underline"
+        >
+          +91 9843849354
+        </NextLink>
         <motion.svg
           variants={slideLeft}
           {...mountAnim}
@@ -26,8 +33,8 @@ export default function Menu({ closeMenu }: { closeMenu: () => void }) {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M1.5 1.5L67 67" stroke="white" />
-          <path d="M66.5 1L0.999997 66.5" stroke="white" />
+          <path d="M1.5 1.5L67 67" stroke="#0c0c0c" />
+          <path d="M66.5 1L0.999997 66.5" stroke="#0c0c0c" />
         </motion.svg>
       </div>
 
