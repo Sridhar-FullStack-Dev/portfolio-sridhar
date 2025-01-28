@@ -41,7 +41,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <div id="projects" className="text-alt-white houseMontage-font">
+    <div id="projects" className="text-alt-white houseMontage-font w-screen overflow-hidden">
       <h1
         ref={ProjectsTextRef}
         className="milker-font text-8xl uppercase perspective-1000 text-alt-white pl-16"

@@ -45,7 +45,7 @@ export default function Doodle() {
   }, []);
 
   return (
-    <div className="text-white font-medium sm:py-10 md:px-8 md:py-40 sm:text-4xl md:text-6xl lg:text-8xl overflow-hidden houseMontage-font rounded-b-3xl">
+    <div className="text-white w-screen overflow-hidden font-medium sm:py-10 md:px-8 md:py-40 sm:text-4xl md:text-6xl lg:text-8xl houseMontage-font rounded-b-3xl">
       <div className="flex w-full justify-center items-center">
         <div className="sm:h-20 md:h-32 w-96 rounded-full overflow-hidden">
           <Image

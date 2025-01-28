@@ -41,7 +41,7 @@ export default function About() {
   }, []);
 
   return (
-    <div id="about" className="text-alt-white houseMontage-font">
+    <div id="about" className="text-alt-white houseMontage-font w-screen overflow-hidden">
       <h1
         ref={aboutTextRef}
         className="milker-font text-8xl uppercase perspective-1000 text-alt-white pl-32"

@@ -1,4 +1,3 @@
-"use client";
 import { useEffect, useRef } from "react";
 import { VelocityScroll } from "../ui/scroll-based-velocity";
 import LocomotiveScroll, { ILocomotiveScrollOptions } from "locomotive-scroll";
@@ -22,7 +21,7 @@ export default function Services() {
     <div
       ref={servicesLocoRef}
       id="services"
-      className="mt-64"
+      className="mt-64 w-screen overflow-hidden" 
       data-scroll-container
     >
       <VelocityScroll

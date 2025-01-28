@@ -38,7 +38,7 @@ export default function CardCarousel() {
   }, []);
 
   return (
-    <div className="container mt-14">
+    <div className="mt-14">
       <div ref={sectionRef} className="h-screen">
         <div>
           <div

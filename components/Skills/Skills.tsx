@@ -97,7 +97,7 @@ export function Skills() {
   }, []);
 
   return (
-    <div className="relative bg-alt-black text-alt-white mt-20 mb-52">
+    <div className="relative bg-alt-black text-alt-white mt-20 mb-52 w-screen overflow-hidden">
       <div className="pl-16 relative">
         <h1
           ref={skillsTextRef}
